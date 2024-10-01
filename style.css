@@ -44,11 +44,15 @@ padding: 10px 0;
 }
 
 nav {
-    background: var(--crossfire-primary);
-    border-bottom: 6px solid var(--crossfire-secondary);
+    background: var(--less-white);
     padding: 8px 0;
     color: black;
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+header {
+    padding-bottom: 6px;
+    border-bottom: 4px solid var(--crossfire-secondary);
 }
 
 ul {
@@ -60,7 +64,7 @@ a, a:active {
 }
 
 nav a, nav a:active {
-    color: white;
+    color: black;
 }
 
 nav ul {
@@ -145,6 +149,14 @@ button:hover, input[type="submit"]:hover {
     background: var(--crossfire-secondary);
 }
 
-@media screen and (width > 650px) {
- 
+@media screen and (width > 1400px) {
+    .width-limit {
+        max-width: 1000px;
+    }
+}
+
+@media screen and (width > 2000px) {
+    .width-limit {
+        max-width: 1400px;
+    }
 }
