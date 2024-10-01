@@ -9,6 +9,8 @@
 :root {
     --crossfire-primary: #173451;
     --crossfire-secondary: #5897c9;
+    --less-white: #fafafa;
+    --less-black: #101010;
 
     --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     --button-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
@@ -16,7 +18,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: #fafafa;
+    background: var(--less-white);
 }
 
 /* Nav */
@@ -42,9 +44,10 @@ padding: 10px 0;
 }
 
 nav {
-    background: var(--crossfire-secondary);
+    background: var(--crossfire-primary);
+    border-bottom: 6px solid var(--crossfire-secondary);
     padding: 8px 0;
-    color: white;
+    color: black;
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
 }
 
@@ -54,6 +57,9 @@ ul {
 
 a, a:active {
     text-decoration: none;
+}
+
+nav a, nav a:active {
     color: white;
 }
 
@@ -93,6 +99,7 @@ section {
     width: 100%;
     max-width: 500px;
     margin: 40px auto 0 auto;
+    background-color: var(--less-white);
     box-shadow: var(--box-shadow);
     padding: 25px 10px;
     border-radius: 10px;
@@ -124,7 +131,7 @@ section {
 }
 
 button, input[type="submit"] {
-    background: var(--crossfire-secondary);
+    background: var(--crossfire-primary);
     color: white;
     padding: 6px 15px;
     border-radius: 4px;
@@ -135,7 +142,7 @@ button, input[type="submit"] {
 }
 
 button:hover, input[type="submit"]:hover {
-    background: var(--crossfire-primary);
+    background: var(--crossfire-secondary);
 }
 
 @media screen and (width > 650px) {
