@@ -9,6 +9,7 @@
 :root {
     --crossfire-primary: #173451;
     --crossfire-secondary: #5897c9;
+    --mid-blue: #186cb0;
     --less-white: #fafafa;
     --less-black: #101010;
 
@@ -24,6 +25,7 @@ body {
 /* Nav */
 #nav-top {
 padding: 10px 0;
+border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 #nav-top .width-limit {
@@ -44,14 +46,9 @@ padding: 10px 0;
 }
 
 nav {
-    background: var(--less-white);
     padding: 8px 0;
     color: black;
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
-}
-
-header {
-    padding-bottom: 6px;
+    border-top: 2px solid rgba(0, 100, 200, 0.1);
     border-bottom: 4px solid var(--crossfire-secondary);
 }
 
@@ -69,10 +66,11 @@ nav a, nav a:active {
 
 nav ul {
     display: flex;
+    width: fit-content;
 }
 
 nav ul li {
-    margin-right: 25px;
+    margin: 0 10px;
 }
 
 .width-limit {
@@ -99,14 +97,17 @@ section {
     padding: 40px 0;
 }
 
-#log-in-box {
-    width: 100%;
-    max-width: 500px;
-    margin: 40px auto 0 auto;
+.box {
     background-color: var(--less-white);
     box-shadow: var(--box-shadow);
     padding: 25px 10px;
     border-radius: 10px;
+}
+
+.log-in-box {
+    width: 100%;
+    max-width: 500px;
+    margin: 40px auto 0 auto;
 }
 
 #log-in-form {
@@ -118,13 +119,13 @@ section {
     display: grid;
 }
 
-#log-in-box h2, #log-in-form > div {
+.log-in-box h2, #log-in-form > div {
     width: 100%;
     max-width: 400px;
     margin: 0 auto;
 }
 
-#log-in-box h2 {
+.log-in-box h2 {
     margin-bottom: 25px;
 }
 
@@ -135,7 +136,7 @@ section {
 }
 
 button, input[type="submit"] {
-    background: var(--crossfire-primary);
+    background: var(--mid-blue);
     color: white;
     padding: 6px 15px;
     border-radius: 4px;
@@ -146,7 +147,15 @@ button, input[type="submit"] {
 }
 
 button:hover, input[type="submit"]:hover {
-    background: var(--crossfire-secondary);
+    background: var(--crossfire-primary);
+}
+
+.fake-log-in-liks {
+    display: grid;
+    row-gap: 10px;
+    width: fit-content;
+    margin: 30px auto 0 auto;
+    font-size: 0.8rem;
 }
 
 @media screen and (width > 1400px) {
