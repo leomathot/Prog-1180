@@ -158,6 +158,23 @@ button:hover, input[type="submit"]:hover {
     font-size: 0.8rem;
 }
 
+.options-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.options-grid .box {
+    text-align: center;
+}
+
+/* Media queries */
+
+@media screen and (width > 760px) {
+    .options-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 @media screen and (width > 1400px) {
     .width-limit {
         max-width: 1000px;
