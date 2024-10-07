@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,13 +9,14 @@
     <link rel="icon" type="image/png" href="images/Crossfire-icon.png">
     <title>Quality Rep Create New NCR - Crossfire NCR App</title>
 </head>
+
 <body>
     <!-- Header -->
     <header>
 
         <!-- Nav top - Common for all the pages -->
         <div id="nav-top"></div>
-        
+
         <!-- Nav -->
         <nav>
             <div class="width-limit">
@@ -25,7 +27,7 @@
                 </ul>
             </div>
         </nav>
-        
+
     </header>
 
     <main>
@@ -33,13 +35,100 @@
             <h1>Create a New NCR</h1>
 
             <!-- Create New NCR Form -->
-            <form action="
-            
-            "></form>
+            <form class="ncr-form">
+                <fieldset>
+                    <legend>Non-Conformance Report</legend>
+
+                    <div class="grd g-2-col">
+                        <div>
+                            <label>Identify Process Applicable:</label>
+                            <div class="rad-options">
+                                <input id="i-p-a-supp" type="radio" name="iPASupp" value="Supplier" required>
+                                <label for="i-p-a-supp">Supplier or Rec-Insp</label><br>
+
+                                <input id="i-p-a-wip" type="radio" name="iPAWIP" value="WIP">
+                                <label for="i-p-a-wip">WIP (Production Order)</label>
+                            </div>
+                            <br>
+
+                            <div>
+                                <label for="supplier-name">Supplier Name:</label><br>
+                                <input type="text" id="supplier-name" name="supplierName">
+                            </div>
+                        </div>
+
+                        <div class="grd g-2-col" id="ncr-nums-group">
+                            <label for="ncr-num">NCR No.:</label>
+                            <input type="text" id="ncr-num" name="ncrNum">
+
+                            <label for="prod-num">PO or Prod. No.:</label>
+                            <input type="text" id="prod-num" name="prodNum">
+
+                            <label for="sales-order">Sales Order No.:</label>
+                            <input type="text" id="sales-order" name="salesOrder">
+
+                            <label for="qnty-received">Quantity Received:</label>
+                            <input type="number" id="qnty-received" name="qntyReceived">
+
+                            <label for="qnty-defective">Quantity Defective:</label>
+                            <input type="number" id="qnty-defective" name="qntyDedective">
+                        </div>
+                    </div>
+                    <br><hr><br>
+
+
+                    <div class="grd g-2-col">
+                        <div>
+                            <div>
+                                <label for="item-decription">Description of Item (including SAP No.):</label><br>
+                                <textarea id="item-decription" name="itemDecription" rows="5"></textarea>
+                            </div>
+
+                            <div>
+                                <label>Item marked Nonconforming:</label>
+                                <div class="rad-options">
+                                    <span>
+                                        <input id="marked-nc-yes" type="radio" name="marked-nc" value="Yes" required>
+                                        <label for="marked-nc-yes">Yes</label>
+                                    </span>
+                                    <span>
+                                        <input id="marked-nc-no" type="radio" name="marked-nc" value="No">
+                                        <label for="marked-nc-no">No</label>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="defect-decription">Description of Defect: <small>(in as much detail as
+                                    possible)</small></label><br>
+                            <textarea id="defect-decription" name="defectDecription" rows="10"></textarea>
+                        </div>
+                    </div>
+                    <br><hr><br>
+
+                    <div class="grd g-2-col">
+                        <div>
+                            <label for="qlty-rep-name">Quality Representative's Name:</label><br>
+                            <input type="text" id="qlty-rep-name" name="qltyRepName">
+                        </div>
+                        <div>
+                            <label for="ncr-date">Date:</label><br>
+                            <input type="date" id="ncr-date" name="nCRDate">
+                        </div>
+
+                    </div>
+                    <br>
+
+                    <input type="submit" value="Submit">
+
+                </fieldset>
+            </form>
 
         </section>
     </main>
     <script src="javascript/nav-top.js"></script>
     <script src="javascript/quality-rep-create-new-validation.js"></script>
 </body>
+
 </html>
