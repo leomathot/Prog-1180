@@ -167,6 +167,52 @@ button:hover, input[type="submit"]:hover {
     text-align: center;
 }
 
+/* Forms */
+
+.ncr-form fieldset {
+    padding: 20px;
+    border: 2px solid var(--crossfire-secondary);
+}
+
+.ncr-form legend {
+    padding: 0 10px;
+}
+
+hr {
+    border: 1px solid var(--crossfire-secondary);
+}
+
+.grd {
+    display: grid;
+    column-gap: 25px;
+    row-gap: 15px;
+}
+
+.g-2-col {
+    grid-template-columns: 1fr 1fr;
+}
+
+#ncr-nums-group {
+    row-gap: 5px;
+}
+
+#supplier-name, #qlty-rep-name, #ncr-date {
+    width: 100%;
+}
+
+.ncr-form textarea {
+    width: 100%;
+    resize: vertical;
+}
+
+.ncr-form #item-decription {
+    min-height: 70px;
+}
+
+.ncr-form #defect-decription {
+    min-height: 120px;
+}
+
 /* Media queries */
 
 @media screen and (width > 760px) {
