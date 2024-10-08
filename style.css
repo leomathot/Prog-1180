@@ -172,6 +172,9 @@ button:hover, input[type="submit"]:hover {
 .ncr-form fieldset {
     padding: 20px;
     border: 2px solid var(--crossfire-secondary);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    min-height: 300px;
 }
 
 .ncr-form legend {
@@ -180,6 +183,17 @@ button:hover, input[type="submit"]:hover {
 
 hr {
     border: 1px solid var(--crossfire-secondary);
+    margin: 25px 0;
+}
+
+.mb-10 {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.mt-20 {
+    display: block;
+    margin-top: 20px;
 }
 
 .grd {
@@ -194,6 +208,41 @@ hr {
 
 #ncr-nums-group {
     row-gap: 5px;
+}
+
+#ncr-nums-group select {
+    max-width: 250px;
+}
+
+input[type="text"], input[type="number"], input[type="date"], select {
+    height: 30px;
+}
+
+input[type="radio"] {
+    height: inherit;
+}
+
+input[type="text"], input[type="number"], input[type="date"], select, textarea {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    padding: 0 5px;
+    border-radius: 6px;
+    border: 1px solid #bbb;
+}
+
+textarea {
+    padding: 5px;
+}
+
+.rad-options {
+    margin-left: 10px;
+}
+
+.rad-options label {
+    font-size: 0.9rem;
+    margin-right: 20px;
+    display: inline-block;
+    transform: translateY(-2px);
 }
 
 #supplier-name, #qlty-rep-name, #ncr-date {
@@ -211,6 +260,23 @@ hr {
 
 .ncr-form #defect-decription {
     min-height: 120px;
+}
+
+.hidden {
+    display: none;
+}
+
+#btnBack, #btnNext {
+    background: #555;
+}
+
+#btnBack:hover, #btnNext:hover {
+    background: #333;
+}
+
+.faded {
+    opacity: 0.4;
+    pointer-events: none; /* cancel hover */
 }
 
 /* Media queries */
