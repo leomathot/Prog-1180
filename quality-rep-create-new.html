@@ -24,9 +24,9 @@
         <nav>
             <div class="width-limit">
                 <ul>
-                    <li><a href="quality-rep-home.html" tabindex="3">Home</a></li>
-                    <li><a href="quality-rep-view-list.html" tabindex="4">NCR List</a></li>
-                    <li><a href="quality-rep-create-new.html" tabindex="5">Create New NCR</a></li>
+                    <li><a href="quality-rep-home.html">Home</a></li>
+                    <li><a href="quality-rep-view-list.html">NCR List</a></li>
+                    <li><a href="quality-rep-create-new.html">Create New NCR</a></li>
                 </ul>
             </div>
         </nav>
@@ -49,19 +49,17 @@
                             <!-- Identify Process Applicable -->
                             <label class="mb-2">Identify Process Applicable:</label>
                             <div class="ms-2">
-                                <input id="i-p-a-supp" type="radio" name="itemMarkedNC" value="Supplier" required
-                                    tabindex="11">
+                                <input id="i-p-a-supp" type="radio" name="itemMarkedNC" value="Supplier" required>
                                 <label class="ms-1" for="i-p-a-supp">Supplier or Rec-Insp</label><br>
 
-                                <input id="i-p-a-wip" type="radio" name="itemMarkedNC" value="WIP" required
-                                    tabindex="11">
+                                <input id="i-p-a-wip" type="radio" name="itemMarkedNC" value="WIP" required>
                                 <label class="ms-1" for="i-p-a-wip">WIP (Production Order)</label>
                             </div>
 
                             <div class="mt-4">
                                 <!-- Supplier Name -->
                                 <label class="mb-2 d-block" for="supplier-name">Supplier Name:</label>
-                                <select class="w-100 js-example-basic-single" id="supplier-name" name="supplierName" tabindex="12">
+                                <select class="w-100 js-example-basic-single" id="supplier-name" name="supplierName" required>
                                     <option value="">Select a Supplier</option>
                                 </select>
                             </div>
@@ -71,14 +69,13 @@
                             <!-- NCR No -->
                             <div class="d-flex row-cols-2">
                                 <label for="ncr-num">NCR No.:</label>
-                                <input type="text" id="ncr-num" name="ncrNum" readonly tabindex="-1"
-                                    placeholder="2024-0107">
+                                <input type="text" id="ncr-num" name="ncrNum" readonly tabindex="-1" placeholder="2024-0107">
                             </div>
 
                             <!-- PO or Prod. No -->
                             <div class="d-flex row-cols-2">
                                 <label for="prod-num">PO or Prod. No.:</label>
-                                <select class="js-example-basic-single" id="prod-num" name="prodNum" tabindex="13">
+                                <select class="js-example-basic-single" id="prod-num" name="prodNum">
                                     <option value="">Select Product No.</option>
                                     <option value="01-00125">01-00125</option>
                                     <option value="01-00129">01-00129</option>
@@ -89,7 +86,7 @@
                             <!-- Sales Order No -->
                             <div class="d-flex row-cols-2">
                                 <label for="sales-order">Sales Order No.:</label>
-                                <select class="js-example-basic-single" id="sales-order" name="salesOrder" tabindex="14">
+                                <select class="js-example-basic-single" id="sales-order" name="salesOrder">
                                     <option value="">Select Sales Order No.</option>
                                     <option value="2024-0031-0124">2024-0031-0124</option>
                                     <option value="2024-0048-0017">2024-0048-0017</option>
@@ -100,14 +97,13 @@
                             <!-- Quantity Received -->
                             <div class="d-flex row-cols-2">
                                 <label for="qnty-received">Quantity Received:</label>
-                                <input type="number" id="qnty-received" name="qntyReceived" readonly
-                                    tabindex="-1" placeholder="1600">
+                                <input type="number" id="qnty-received" name="qntyReceived" readonly tabindex="-1" placeholder="1600">
                             </div>
 
                             <!-- Quantity Defective -->
                             <div class="d-flex row-cols-2">
                                 <label for="qnty-defective">Quantity Defective:</label>
-                                <input type="number" id="qnty-defective" name="qntyDedective" tabindex="15">
+                                <input type="number" id="qnty-defective" name="qntyDedective">
                             </div>
                         </div>
                     </div>
@@ -123,20 +119,18 @@
                                 <!-- Description of Item -->
                                 <label class="mb-2" for="item-decription">Description of Item (including SAP
                                     No.):</label>
-                                <textarea class="w-100 p-1" id="item-decription" name="itemDecription" rows="3" style="min-height: 70px;"
-                                    tabindex="16"></textarea>
+                                <textarea class="w-100 p-1" id="item-decription" name="itemDecription" rows="3" style="min-height: 70px;"></textarea>
                             </div>
 
                             <!-- Item marked Nonconforming -->
                             <label class="mb-2 mt-4">Item marked Nonconforming:</label>
                             <div class="ms-2 d-flex gap-4">
                                 <span>
-                                    <input id="marked-nc-yes" type="radio" name="marked-nc" value="Yes" required
-                                        tabindex="17">
+                                    <input id="marked-nc-yes" type="radio" name="marked-nc" value="Yes" required>
                                     <label class="ms-1" for="marked-nc-yes">Yes</label>
                                 </span>
                                 <span>
-                                    <input id="marked-nc-no" type="radio" name="marked-nc" value="No" tabindex="17">
+                                    <input id="marked-nc-no" type="radio" name="marked-nc" value="No">
                                     <label class="ms-1" for="marked-nc-no">No</label>
                                 </span>
                             </div>
@@ -146,8 +140,7 @@
                             <!-- Description of Defect -->
                             <label class="mb-2" for="defect-decription">Description of Defect: <small>(in as much
                                     detail as possible)</small></label>
-                            <textarea class="w-100 p-1" id="defect-decription" name="defectDecription" rows="7"  style="min-height: 120px;"
-                                tabindex="18"></textarea>
+                            <textarea class="w-100 p-1" id="defect-decription" name="defectDecription" rows="7"  style="min-height: 120px;"></textarea>
                         </div>
                     </div>
                 </fieldset>
@@ -166,7 +159,7 @@
                         <div class="col mt-4 mt-md-0">
                             <!-- Date -->
                             <label class="mb-2 d-block" for="ncr-date">Date:</label>
-                            <input class="w-100" type="date" id="ncr-date" name="nCRDate" required tabindex="19">
+                            <input class="w-100" type="date" id="ncr-date" name="nCRDate" required>
                         </div>
                     </div>
 
