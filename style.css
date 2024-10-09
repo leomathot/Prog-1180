@@ -124,9 +124,8 @@ form fieldset {
     min-height: 250px;
 }
 
-
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 .faded {
