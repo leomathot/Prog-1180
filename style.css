@@ -54,10 +54,12 @@ nav {
 
 ul {
     list-style: none;
+    margin: 0  !important;
+    padding: 0 !important;
 }
 
 a, a:active {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 nav a, nav a:active {
@@ -69,9 +71,11 @@ nav ul {
     width: fit-content;
 }
 
-nav ul li {
-    margin: 0 10px;
+nav ul li:not(:first-child) {
+    margin-left: 20px;
 }
+
+/* --- */
 
 .width-limit {
     margin: 0 auto;
@@ -79,199 +83,50 @@ nav ul li {
     width: 95%;
 }
 
-h1 {
-    font-size: 1.8rem;
-    margin-bottom: 30px;
-}
-
 h2 {
     color: var(--crossfire-primary);
     margin-bottom: 12px;
 }
 
-.text-center {
-    text-align: center;
-}
-
-section {
-    padding: 40px 0;
-}
-
-.box {
-    background-color: var(--less-white);
-    box-shadow: var(--box-shadow);
-    padding: 25px 10px;
-    border-radius: 10px;
-}
-
-.log-in-box {
+#log-in-box {
     width: 100%;
     max-width: 500px;
     margin: 40px auto 0 auto;
 }
 
-#log-in-form {
-    display: grid;
-    row-gap: 20px;
-}
-
-#log-in-form > div {
-    display: grid;
-}
-
-.log-in-box h2, #log-in-form > div {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-.log-in-box h2 {
-    margin-bottom: 25px;
-}
-
-#log-in-form input[type="text"] {
-    border: 1px solid var(--crossfire-secondary);
-    padding: 4px;
-    border-radius: 4px;
-}
-
-button, input[type="submit"] {
-    background: var(--mid-blue);
-    color: white;
-    padding: 6px 15px;
-    border-radius: 4px;
-    min-width: 100px;
-    border: none;
-    box-shadow: var(--button-shadow);
-    max-width: 200px;
-}
-
-button:hover, input[type="submit"]:hover {
+.bg-crossfire-primary {
     background: var(--crossfire-primary);
 }
 
-.fake-log-in-liks {
-    display: grid;
-    row-gap: 10px;
-    width: fit-content;
-    margin: 30px auto 0 auto;
-    font-size: 0.8rem;
+.bg-crossfire-secondary {
+    background: var(--crossfire-secondary);
 }
 
-.options-grid {
-    display: grid;
-    gap: 20px;
+.bg-mid-blue {
+    background: var(--mid-blue) !important;
+    color: white !important;
 }
 
-.options-grid .box {
-    text-align: center;
+.bg-mid-blue:hover {
+    background: var(--crossfire-primary) !important;
+}
+
+.card-link:hover {
+    background: var(--crossfire-secondary);
+    color: white;
+    transition: all 0.15s;
 }
 
 /* Forms */
-
-.ncr-form fieldset {
-    padding: 20px;
+form fieldset {
     border: 2px solid var(--crossfire-secondary);
     border-radius: 8px;
-    margin-bottom: 20px;
-    min-height: 300px;
+    min-height: 250px;
 }
 
-.ncr-form legend {
-    padding: 0 10px;
-}
-
-hr {
-    border: 1px solid var(--crossfire-secondary);
-    margin: 25px 0;
-}
-
-.mb-10 {
-    display: block;
-    margin-bottom: 10px;
-}
-
-.mt-20 {
-    display: block;
-    margin-top: 20px;
-}
-
-.grd {
-    display: grid;
-    column-gap: 25px;
-    row-gap: 15px;
-}
-
-.g-2-col {
-    grid-template-columns: 1fr 1fr;
-}
-
-#ncr-nums-group {
-    row-gap: 5px;
-}
-
-#ncr-nums-group select {
-    max-width: 250px;
-}
-
-input[type="text"], input[type="number"], input[type="date"], select {
-    height: 30px;
-}
-
-input[type="radio"] {
-    height: inherit;
-}
-
-input[type="text"], input[type="number"], input[type="date"], select, textarea {
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.9rem;
-    padding: 0 5px;
-    border-radius: 6px;
-    border: 1px solid #bbb;
-}
-
-textarea {
-    padding: 5px;
-}
-
-.rad-options {
-    margin-left: 10px;
-}
-
-.rad-options label {
-    font-size: 0.9rem;
-    margin-right: 20px;
-    display: inline-block;
-    transform: translateY(-2px);
-}
-
-#supplier-name, #qlty-rep-name, #ncr-date {
-    width: 100%;
-}
-
-.ncr-form textarea {
-    width: 100%;
-    resize: vertical;
-}
-
-.ncr-form #item-decription {
-    min-height: 70px;
-}
-
-.ncr-form #defect-decription {
-    min-height: 120px;
-}
 
 .hidden {
     display: none;
-}
-
-#btnBack, #btnNext {
-    background: #555;
-}
-
-#btnBack:hover, #btnNext:hover {
-    background: #333;
 }
 
 .faded {
