@@ -22,6 +22,10 @@ body {
     background: var(--less-white);
 }
 
+main {
+    min-height: 80vh;
+}
+
 /* Nav */
 #nav-top {
 padding: 10px 0;
@@ -121,16 +125,6 @@ h2 {
 form fieldset {
     border: 2px solid var(--crossfire-secondary);
     border-radius: 8px;
-    min-height: 250px;
-}
-
-.hidden {
-    display: none !important;
-}
-
-.faded {
-    opacity: 0.4;
-    pointer-events: none; /* cancel hover */
 }
 
 /* Media queries */
