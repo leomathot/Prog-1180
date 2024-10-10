@@ -4,11 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/9b4432bc04.js" crossorigin="anonymous"></script>
+    <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- select2 -->
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <!-- tab icon -->
     <link rel="icon" type="image/png" href="images/Crossfire-icon.png">
     <title>Quality Rep Create New NCR - Crossfire NCR App</title>
 </head>
@@ -35,13 +40,13 @@
 
     <main>
         <section class="width-limit py-4">
-            <h1 class="fs-3">Create a New NCR</h1>
+            <h1 class="fs-3">Create a New NCR - Quality Rep Section</h1>
 
             <!-- Create New NCR Form -->
-            <form class="mt-5">
+            <form class="my-5">
 
                 <fieldset class="p-3 mb-4" id="fieldset-1">
-                    <legend class="float-none w-auto fs-6 fw-bold px-1">NCR - Quality Rep Section <small>( 1/3 )</small>
+                    <legend class="float-none w-auto fs-6 fw-bold px-1">NCR <small>( 1/3 )</small>
                     </legend>
 
                     <div class="row row-cols-1 row-cols-md-2">
@@ -59,7 +64,7 @@
                             <div class="mt-4">
                                 <!-- Supplier Name -->
                                 <label class="mb-2 d-block" for="supplier-name">Supplier Name:</label>
-                                <select class="w-100 js-example-basic-single" id="supplier-name" name="supplierName" required>
+                                <select class="w-100" id="supplier-name" name="supplierName" required>
                                     <option value="">Select a Supplier</option>
                                 </select>
                             </div>
@@ -69,13 +74,14 @@
                             <!-- NCR No -->
                             <div class="d-flex row-cols-2">
                                 <label for="ncr-num">NCR No.:</label>
-                                <input type="text" id="ncr-num" name="ncrNum" readonly tabindex="-1" placeholder="2024-0107">
+                                <input class="px-1" type="text" id="ncr-num" name="ncrNum" readonly tabindex="-1"
+                                    placeholder="2024-0107">
                             </div>
 
                             <!-- PO or Prod. No -->
                             <div class="d-flex row-cols-2">
                                 <label for="prod-num">PO or Prod. No.:</label>
-                                <select class="js-example-basic-single" id="prod-num" name="prodNum">
+                                <select class="select-num" id="prod-num" name="prodNum">
                                     <option value="">Select Product No.</option>
                                     <option value="01-00125">01-00125</option>
                                     <option value="01-00129">01-00129</option>
@@ -86,7 +92,7 @@
                             <!-- Sales Order No -->
                             <div class="d-flex row-cols-2">
                                 <label for="sales-order">Sales Order No.:</label>
-                                <select class="js-example-basic-single" id="sales-order" name="salesOrder">
+                                <select class="select-num" id="sales-order" name="salesOrder">
                                     <option value="">Select Sales Order No.</option>
                                     <option value="2024-0031-0124">2024-0031-0124</option>
                                     <option value="2024-0048-0017">2024-0048-0017</option>
@@ -97,20 +103,21 @@
                             <!-- Quantity Received -->
                             <div class="d-flex row-cols-2">
                                 <label for="qnty-received">Quantity Received:</label>
-                                <input type="number" id="qnty-received" name="qntyReceived" readonly tabindex="-1" placeholder="1600">
+                                <input class="px-1" type="number" id="qnty-received" name="qntyReceived" readonly tabindex="-1"
+                                    placeholder="1600">
                             </div>
 
                             <!-- Quantity Defective -->
                             <div class="d-flex row-cols-2">
                                 <label for="qnty-defective">Quantity Defective:</label>
-                                <input type="number" id="qnty-defective" name="qntyDedective">
+                                <input class="px-1" type="number" id="qnty-defective" name="qntyDedective">
                             </div>
                         </div>
                     </div>
                 </fieldset>
 
-                <fieldset class="p-3 mb-4 hidden" id="fieldset-2">
-                    <legend class="float-none w-auto fs-6 fw-bold px-1">NCR - Quality Rep Section <small>( 2/3 )</small>
+                <fieldset class="p-3 mb-4" id="fieldset-2">
+                    <legend class="float-none w-auto fs-6 fw-bold px-1">NCR <small>( 2/3 )</small>
                     </legend>
 
                     <div class="row row-cols-1 row-cols-md-2">
@@ -119,7 +126,8 @@
                                 <!-- Description of Item -->
                                 <label class="mb-2" for="item-decription">Description of Item (including SAP
                                     No.):</label>
-                                <textarea class="w-100 p-1" id="item-decription" name="itemDecription" rows="3" style="min-height: 70px;"></textarea>
+                                <textarea class="w-100 p-1" id="item-decription" name="itemDecription" rows="3"
+                                    style="min-height: 70px;"></textarea>
                             </div>
 
                             <!-- Item marked Nonconforming -->
@@ -140,57 +148,67 @@
                             <!-- Description of Defect -->
                             <label class="mb-2" for="defect-decription">Description of Defect: <small>(in as much
                                     detail as possible)</small></label>
-                            <textarea class="w-100 p-1" id="defect-decription" name="defectDecription" rows="7"  style="min-height: 120px;"></textarea>
+                            <textarea class="w-100 p-1" id="defect-decription" name="defectDecription" rows="7"
+                                style="min-height: 120px;"></textarea>
                         </div>
                     </div>
                 </fieldset>
 
-                <fieldset class="p-3 mb-4 hidden" id="fieldset-3">
-                    <legend class="float-none w-auto fs-6 fw-bold px-1">NCR - Quality Rep Section <small>( 3/3 )</small>
+                <fieldset class="p-3 mb-4" id="fieldset-3">
+                    <legend class="float-none w-auto fs-6 fw-bold px-1">NCR <small>( 3/3 )</small>
                     </legend>
 
                     <div class="row row-cols-1 row-cols-md-2">
                         <div class="col">
                             <!-- Quality Representative's Name -->
                             <label class="mb-2 d-block" for="qlty-rep-name">Quality Representative's Name:</label>
-                            <input class="w-100" type="text" id="qlty-rep-name" name="qltyRepName" readonly tabindex="-1"
-                                placeholder="Sara Smith">
+                            <input class="w-100 px-1" type="text" id="qlty-rep-name" name="qltyRepName" readonly
+                                tabindex="-1" placeholder="Sara Smith">
                         </div>
                         <div class="col mt-4 mt-md-0">
                             <!-- Date -->
                             <label class="mb-2 d-block" for="ncr-date">Date:</label>
-                            <input class="w-100" type="date" id="ncr-date" name="nCRDate" required>
+                            <input class="w-100 px-1" type="date" id="ncr-date" name="nCRDate" required>
                         </div>
                     </div>
 
                 </fieldset>
 
-                <button class="btn btn-secondary" id="btnBack">Back</button>
-                <button class="btn btn-secondary" id="btnNext">Next</button>
                 <!-- Save -->
-                <input class="btn btn-primary" id="btnSave" type="submit" value="Save">
+                <input class="btn btn-dark" id="btnSave" type="submit" value="Save">
                 <!-- Submit -->
-                <input class="btn btn-primary hidden" id="btnSubmit" type="submit" value="Submit">
+                <input class="btn btn-primary" id="btnSubmit" type="submit" value="Submit">
 
             </form>
 
         </section>
     </main>
+    
+    <!-- Footer -->
+    <section class="p-5 bg-light">
+        <div class="width-limit">
+            <p><small>Developed by 404 Cached</small></p>
+        </div>
+    </section>
+    
+    <!-- scripts -->
     <script src="javascript/nav-top.js"></script>
     <script src="javascript/quality-rep-create-new-data.js"></script>
     <script src="javascript/quality-rep-create-new-validation.js"></script>
 
+    <!-- bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
+    <!-- select2 -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script>
-        $(document).ready(function () { $('.js-example-basic-single').select2({ with: auto }); });
+        $(document).ready(function () { $('#supplier-name').select2(); });
+        $(document).ready(function () { $('.select-num').select2(); });
     </script>
 
-    <!-- add footer script -->
 </body>
 
 </html>
