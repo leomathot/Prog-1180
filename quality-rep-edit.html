@@ -54,17 +54,17 @@
                             <!-- Identify Process Applicable -->
                             <label class="mb-2">Identify Process Applicable:</label>
                             <div class="ms-2">
-                                <input id="i-p-a-supp" type="radio" name="itemMarkedNC" value="Supplier" required>
+                                <input id="i-p-a-supp" type="radio" name="itemMarkedNC" value="Supplier" required aria-required="true">
                                 <label class="ms-1" for="i-p-a-supp">Supplier or Rec-Insp</label><br>
 
-                                <input id="i-p-a-wip" type="radio" name="itemMarkedNC" value="WIP" required>
+                                <input id="i-p-a-wip" type="radio" name="itemMarkedNC" value="WIP" required aria-required="true">
                                 <label class="ms-1" for="i-p-a-wip">WIP (Production Order)</label>
                             </div>
 
                             <div class="mt-4">
                                 <!-- Supplier Name -->
                                 <label class="mb-2 d-block" for="supplier-name">Supplier Name:</label>
-                                <select class="w-100" id="supplier-name" name="supplierName" required>
+                                <select class="w-100" id="supplier-name" name="supplierName" required aria-required="true">
                                     <option value="">Select a Supplier</option>
                                 </select>
                             </div>
@@ -134,7 +134,7 @@
                             <label class="mb-2 mt-4">Item marked Nonconforming:</label>
                             <div class="ms-2 d-flex gap-4">
                                 <span>
-                                    <input id="marked-nc-yes" type="radio" name="marked-nc" value="Yes" required>
+                                    <input id="marked-nc-yes" type="radio" name="marked-nc" value="Yes" required aria-required="true">
                                     <label class="ms-1" for="marked-nc-yes">Yes</label>
                                 </span>
                                 <span>
@@ -168,7 +168,7 @@
                         <div class="col mt-4 mt-md-0">
                             <!-- Date -->
                             <label class="mb-2 d-block" for="ncr-date">Date:</label>
-                            <input class="w-100 px-1" type="date" id="ncr-date" name="nCRDate" required>
+                            <input class="w-100 px-1" type="date" id="ncr-date" name="nCRDate" required aria-required="true">
                         </div>
                     </div>
 
