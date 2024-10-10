@@ -4,7 +4,7 @@ document.querySelector('#nav-top').innerHTML = `
             <img src="images/Crossfire-logo-no-bg.png" alt="Crossfire logo"/>
         </a>
         <div class="links">
-            <a href="#" title="User">
+            <a href="#" title="User" role="button">
                 <i class="fa-solid fa-user"></i>
             </a>
         </div>
