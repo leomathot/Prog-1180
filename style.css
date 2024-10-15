@@ -79,8 +79,6 @@ nav ul li:not(:first-child) {
     margin-left: 20px;
 }
 
-/* --- */
-
 .width-limit {
     margin: 0 auto;
     max-width: 900px;
@@ -111,8 +109,28 @@ h2 {
     color: white !important;
 }
 
-.bg-mid-blue:hover {
+.text-crossfire-primary {
+    color: var(--crossfire-primary);
+}
+
+.text-crossfire-secondary {
+    color: var(--crossfire-secondary);
+}
+
+.text-mid-blue {
+    color: var(--mid-blue) !important;
+}
+
+.btn.bg-mid-blue:hover {
     background: var(--crossfire-primary) !important;
+}
+
+.thead {
+    border-bottom: 2px solid var(--crossfire-secondary);
+}
+
+.w-50-25 { 
+    min-width: 50%; /* 25% from 760px */
 }
 
 .card-link:hover {
@@ -121,10 +139,20 @@ h2 {
     transition: all 0.15s;
 }
 
-/* Forms */
-form fieldset {
+form fieldset, .details {
     border: 2px solid var(--crossfire-secondary);
     border-radius: 8px;
+}
+
+.details hr {
+    margin: 20px 0;
+    border-width: 2px;
+    border-color: #5897c9;
+    opacity: 1;
+}
+
+.btn {
+    min-width: 100px;
 }
 
 /* Media queries */
@@ -132,6 +160,9 @@ form fieldset {
 @media screen and (width > 760px) {
     .options-grid {
         grid-template-columns: 1fr 1fr;
+    }
+    .w-50-25 {
+        min-width: 25%;
     }
 }
 

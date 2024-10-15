@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,51 +15,74 @@
     <link rel="icon" type="image/png" href="images/Crossfire-icon.png">
     <title>Quality Rep NCR List - Crossfire NCR App</title>
 </head>
+
 <body>
     <!-- Header -->
     <header>
 
         <!-- Nav top - Common for all the pages -->
         <div id="nav-top"></div>
-        
+
         <!-- Nav -->
         <nav>
             <div class="width-limit">
                 <ul>
                     <li><a href="quality-rep-home.html">Home</a></li>
-                    <li><a href="quality-rep-view-list.html">NCR List</a></li>
-                    <li><a href="quality-rep-create-new.html">Create New NCR</a></li>
+                    <li><a href="quality-rep-list.html">NCR List</a></li>
+                    <li><a href="quality-rep-create.html">Create New NCR</a></li>
                 </ul>
             </div>
         </nav>
-        
+
     </header>
 
     <main>
         <section class="width-limit py-4">
             <h1 class="fs-3">NCR List</h1>
 
-            <!-- Create New NCR Form -->
-            <form action="
-            
-            "></form>
+            <div class="table-responsive">
+                <table class="table mt-5 table-hover">
+                    <thead class="thead">
+                        <tr>
+                            <th>
+                                NCR Number
+                            </th>
+                            <th>
+                                Date
+                            </th>
+                            <th>
+                                Product
+                            </th>
+                            <th>
+                                Status
+                            </th>
+                            <th>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
 
         </section>
     </main>
-    
+
     <!-- Footer -->
     <section class="p-5 bg-light">
         <div class="width-limit">
             <p><small>Developed by 404 Cached</small></p>
         </div>
     </section>
-    
+
     <!-- scripts -->
     <script src="javascript/nav-top.js"></script>
+    <script src="javascript/quality-rep-list-data.js"></script>
 
     <!-- bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 </body>
+
 </html>
