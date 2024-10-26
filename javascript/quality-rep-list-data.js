@@ -6,52 +6,52 @@ document.addEventListener("DOMContentLoaded", () => {
         "NCR Number": "2024-032",
         "Date": "10/04/2024",
         "Product": "04-00157",
-        "Status": "Q-Rep Working",
+        "Status": "QR Working",
     }, {
         "NCR Number": "2024-032",
         "Date": "09/28/2024",
         "Product": "11-00219",
-        "Status": "Q-Rep Completed",
+        "Status": "QR Completed",
     }, {
         "NCR Number": "2024-032",
         "Date": "10/04/2024",
         "Product": "04-00157",
-        "Status": "Q-Rep Working",
+        "Status": "QR Working",
     }, {
         "NCR Number": "2024-032",
         "Date": "09/28/2024",
         "Product": "11-00219",
-        "Status": "Q-Rep Working",
+        "Status": "QR Working",
     }, {
         "NCR Number": "2024-032",
         "Date": "10/04/2024",
         "Product": "04-00157",
-        "Status": "Q-Rep Completed",
+        "Status": "QR Completed",
     }, {
         "NCR Number": "2024-032",
         "Date": "09/28/2024",
         "Product": "11-00219",
-        "Status": "Q-Rep Working",
+        "Status": "QR Working",
     }, {
         "NCR Number": "2024-032",
         "Date": "10/04/2024",
         "Product": "04-00157",
-        "Status": "Q-Rep Completed",
+        "Status": "QR Completed",
     }, {
         "NCR Number": "2024-032",
         "Date": "09/28/2024",
         "Product": "11-00219",
-        "Status": "Q-Rep Working",
+        "Status": "QR Working",
     }, {
         "NCR Number": "2024-032",
         "Date": "10/04/2024",
         "Product": "04-00157",
-        "Status": "Q-Rep Working",
+        "Status": "QR Working",
     }, {
         "NCR Number": "2024-032",
         "Date": "09/28/2024",
         "Product": "11-00219",
-        "Status": "Q-Rep Working",
+        "Status": "QR Working",
     },
     ]
 
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </td>
             <td>
                 <a class="me-2" href="quality-rep-details.html">View</a>
-                ${r.Status == "Q-Rep Completed"
+                ${r.Status == "QR Completed"
                 ? ""
                 : '<a class="" href="quality-rep-edit.html">Edit</a>'}
             </td>

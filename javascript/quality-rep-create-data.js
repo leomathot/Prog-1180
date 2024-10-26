@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    // Add suppliers
+
     let suppNameSelect = document.querySelector("#supplier-name")
 
     let suppliers = [
