@@ -166,6 +166,18 @@ form fieldset :not(legend) .fw-bold, .ncr-details .fw-bold, .ncr-list th {
     min-width: 100px;
 }
 
+.fa-pen-to-square {
+    /* color: #ad3d00; */
+}
+
+.fa-square-check {
+    color: #00886d;
+}
+
+.fa-pen-to-square, .fa-square-check {
+    margin-right: 10px;
+}
+
 /* Media queries */
 
 @media screen and (width > 760px) {

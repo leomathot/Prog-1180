@@ -68,7 +68,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 ${r.Product}
             </td>
             <td>
-                ${r.Status}
+                ${r.Status == "QR Completed" 
+                ? '<i class="fa-solid fa-square-check"></i> ' 
+                : '<i class="fa-solid fa-pen-to-square"></i> ' }${r.Status}
             </td>
             <td>
                 <a class="me-2" href="quality-rep-details.html">View</a>
