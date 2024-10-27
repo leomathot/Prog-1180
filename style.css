@@ -63,6 +63,10 @@ ul {
     padding: 0 !important;
 }
 
+a {
+    width: fit-content;
+}
+
 a, a:active {
     text-decoration: none !important;
 }
@@ -116,12 +120,17 @@ h2 {
     color: var(--mid-blue) !important;
 }
 
+.btn {
+    min-width: 100px;
+    box-shadow: 0 4px 8px #00000060;
+}
+
 .btn.bg-mid-blue:hover {
     background: var(--crossfire-primary) !important;
 }
 
 .btn.bg-mid-blue:focus {
-    box-shadow: 0 0 0 4px #80aed3;
+    box-shadow: 0 0 0 4px #8ec3ef;
     background: var(--crossfire-primary) !important;
 }
 
@@ -129,8 +138,9 @@ h2 {
     border-bottom: 2px solid var(--crossfire-secondary);
 }
 
-.w-50-25 { 
-    min-width: 50%; /* 25% from 760px */
+.btn-wide, .btn-wide .btn  {
+    width: 100%;
+    max-width: 200px; /* wide buttons */
 }
 
 #login-box {
@@ -161,12 +171,13 @@ form fieldset :not(legend) .fw-bold, .ncr-details .fw-bold, .ncr-list th {
     opacity: 1;
 }
 
-.btn {
-    min-width: 100px;
+.fa-square-minus {
+    color: #d07200;
+    padding-right: 10px;
 }
 
 .fa-square-check {
-    color: #00886d;
+    color: #009f7f;
 }
 
 .fa-pen-to-square, .fa-square-check {
@@ -217,8 +228,8 @@ form fieldset :not(legend) .fw-bold, .ncr-details .fw-bold, .ncr-list th {
     .options-grid {
         grid-template-columns: 1fr 1fr;
     }
-    .w-50-25 {
-        min-width: 25%;
+    .btn-wide, .btn-wide .btn {
+        max-width: 300px;
     }
 }
 

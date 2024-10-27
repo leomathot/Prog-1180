@@ -70,13 +70,13 @@ document.addEventListener("DOMContentLoaded", () => {
             <td>
                 ${r.Status == "QR Completed" 
                 ? '<i class="fa-solid fa-square-check"></i> ' 
-                : '<i class="fa-solid fa-pen-to-square"></i> ' }${r.Status}
+                : '<i class="fa-solid fa-square-minus"></i> ' }${r.Status}
             </td>
             <td>
-                <a class="me-2" href="quality-rep-details.html">View</a>
+                <a class="" href="quality-rep-details.html">View</a>
                 ${r.Status == "QR Completed"
                 ? ""
-                : '<a class="" href="quality-rep-edit.html">Edit</a>'}
+                : '<a class="ms-2" href="quality-rep-edit.html">Edit</a>'}
             </td>
         </tr>
     `

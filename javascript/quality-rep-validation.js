@@ -14,17 +14,17 @@ document.addEventListener("DOMContentLoaded", () => {
         msgBox.querySelector("#title").innerHTML = `<i class="fa-regular fa-circle-check me-2"></i> Form saved!`
         msgBox.querySelector("#text").innerHTML = `You can continue editing this NCR later.`
         msgBox.querySelector("#btns").innerHTML = `
-            <a class="d-flex justify-content-center mt-4" href="quality-rep-details.html">
-            <button class="btn bg-mid-blue w-50-25 shadow">See Details</button>
+            <a class="d-block mt-4 mx-auto btn-wide" href="quality-rep-details.html" tabindex="-1">
+            <button class="btn bg-mid-blue">See Details</button>
             </a>
-            <a class="d-flex justify-content-center mt-4" href="quality-rep-edit.html">
-            <button class="btn bg-mid-blue w-50-25 shadow">Resume Editing</button>
+            <a class="d-block mt-4 mx-auto btn-wide" href="quality-rep-edit.html" tabindex="-1">
+            <button class="btn bg-mid-blue">Resume Editing</button>
             </a>
-            <a class="d-flex justify-content-center mt-4" href="quality-rep-create.html">
-            <button class="btn bg-mid-blue w-50-25 shadow">Create a New NCR</button>
+            <a class="d-block mt-4 mx-auto btn-wide" href="quality-rep-create.html" tabindex="-1">
+            <button class="btn bg-mid-blue">Create a New NCR</button>
             </a>
-            <a class="d-flex justify-content-center mt-4" href="quality-rep-list.html">
-            <button class="btn bg-mid-blue w-50-25 shadow">See Your NCRs List</button>
+            <a class="d-block mt-4 mx-auto btn-wide" href="quality-rep-list.html" tabindex="-1">
+            <button class="btn bg-mid-blue">See Your NCRs List</button>
             </a>`
     })
 
@@ -65,14 +65,14 @@ document.addEventListener("DOMContentLoaded", () => {
         msgBox.querySelector("#title").innerHTML = `<i class="fa-regular fa-circle-check me-2"></i> NCR submitted!`
         msgBox.querySelector("#text").innerHTML = `You can see the NCR details, create a new one, or go to the list.`
         msgBox.querySelector("#btns").innerHTML = `
-            <a class="d-flex justify-content-center mt-4" href="quality-rep-details.html">
-            <button class="btn bg-mid-blue w-50-25 shadow">See Details</button>
+            <a class="d-block mt-4 mx-auto btn-wide" href="quality-rep-details.html" tabindex="-1">
+            <button class="btn bg-mid-blue">See Details</button>
             </a>
-            <a class="d-flex justify-content-center mt-4" href="quality-rep-create.html">
-            <button class="btn bg-mid-blue w-50-25 shadow">Create a New NCR</button>
+            <a class="d-block mt-4 mx-auto btn-wide" href="quality-rep-create.html" tabindex="-1">
+            <button class="btn bg-mid-blue">Create a New NCR</button>
             </a>
-            <a class="d-flex justify-content-center mt-4" href="quality-rep-list.html">
-            <button class="btn bg-mid-blue w-50-25 shadow">See Your NCRs List</button>
+            <a class="d-block mt-4 mx-auto btn-wide" href="quality-rep-list.html" tabindex="-1">
+            <button class="btn bg-mid-blue">See Your NCRs List</button>
             </a>`
     })
 })
