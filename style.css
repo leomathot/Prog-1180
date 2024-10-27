@@ -164,6 +164,29 @@ form fieldset :not(legend) .fw-bold, .ncr-details .fw-bold, .ncr-list th {
     color: var(--mid-blue) !important;
 }
 
+/* jsdelivr.net select2 drop down lists  and other form inputs border*/
+.select2-container--default .select2-selection--single, 
+fieldset input,
+textarea {
+    border: 1px solid var(--crossfire-secondary) !important;
+    border-radius: 4px;
+}
+
+/* Radio buttons border*/
+fieldset input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 1px solid var(--crossfire-secondary);
+    box-shadow: inset 0 0 0 2px #fff;
+  }
+
+  fieldset input[type="radio"]:checked {
+    background-color: var(--crossfire-primary);
+  }
+
 .ncr-details hr {
     margin: 30px 0;
     border-width: 2px;
