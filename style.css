@@ -10,6 +10,7 @@
     --crossfire-primary: #173451;
     --crossfire-secondary: #5897c9;
     --mid-blue: #13558B;
+    --light-blue: #86d4f3;
     --less-white: #fafafa;
     --less-black: #101010;
 
@@ -119,6 +120,11 @@ h2 {
     background: var(--crossfire-primary) !important;
 }
 
+.btn.bg-mid-blue:focus {
+    box-shadow: 0 0 0 4px #80aed3;
+    background: var(--crossfire-primary) !important;
+}
+
 .thead {
     border-bottom: 2px solid var(--crossfire-secondary);
 }
@@ -186,7 +192,7 @@ form fieldset :not(legend) .fw-bold, .ncr-details .fw-bold, .ncr-list th {
     width: 100%;
     max-width: 500px;
     margin: auto;
-    box-shadow: 0 2px 10px 5px #00000080;
+    box-shadow: 0 2px 12px 5px #00000090;
 }
 
 .ncr-modal-top {
@@ -196,8 +202,8 @@ form fieldset :not(legend) .fw-bold, .ncr-details .fw-bold, .ncr-list th {
     padding: 10px;
 }
 
-.ncr-modal-top i:hover {
-    cursor: pointer;
+.modal-close {
+    min-width: fit-content ;
 }
 
 .ncr-modal-body {
