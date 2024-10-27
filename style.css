@@ -179,12 +179,12 @@ fieldset input[type="radio"] {
     height: 15px;
     width: 15px;
     border-radius: 50%;
-    border: 1px solid var(--crossfire-secondary);
+    border: 1px solid #000 !important;
     box-shadow: inset 0 0 0 2px #fff;
   }
 
   fieldset input[type="radio"]:checked {
-    background-color: var(--crossfire-primary);
+    background-color: var(--crossfire-secondary);
   }
 
 .ncr-details hr {
