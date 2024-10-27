@@ -196,6 +196,10 @@ form fieldset :not(legend) .fw-bold, .ncr-details .fw-bold, .ncr-list th {
     padding: 10px;
 }
 
+.ncr-modal-top i:hover {
+    cursor: pointer;
+}
+
 .ncr-modal-body {
     padding: 20px;
 }
