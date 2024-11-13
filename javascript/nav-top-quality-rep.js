@@ -8,5 +8,6 @@ document.querySelector("#nav-top").innerHTML = `
             <a href="#" title="User" role="button">
                 <i class="fa-solid fa-user"></i>
             </a>
+            <span class="text-mid-blue fw-bold mt-3 ms-2 card p-1">Quality Rep</span>
         </div>
     </div>`

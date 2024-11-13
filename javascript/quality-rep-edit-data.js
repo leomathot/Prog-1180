@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    let suppNameSelect = document.querySelector("#supplier-name");
+    let suppNameSelect = document.querySelector("#supplier-name")
 
     let suppliers = [
         "Blue Star", "Access Co.", "Mart Guys", "Tech Solutions", "Green Valley", "Prime Supplies",
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "Asteroid Goods", "Meteorite Traders", "Orbit Enterprises", "Planet Supplies", "Star Goods",
         "Universe Traders", "Milky Way Enterprises", "Andromeda Supplies", "Pulsar Goods", "Quasar Traders",
         "Black Hole Enterprises", "Supernova Supplies", "Starlight Goods", "Moonbeam Traders", "Sunshine Enterprises"
-    ];
+    ]
 
     let val = 1
     suppliers.sort().forEach((s) => {
@@ -32,28 +32,56 @@ document.addEventListener("DOMContentLoaded", () => {
         val++
         option.text = s
         suppNameSelect.appendChild(option)
-    });
+    })
 
+    const identProcessApp = document.getElementById("i-p-a-supp")
+    identProcessApp.checked = true
 
-    const identProcessApp = document.getElementById("i-p-a-supp");
-    identProcessApp.checked = true;
+    const supplierSelect = document.getElementById("supplier-name")
+    supplierSelect.value = "0021"
 
-    const supplierSelect = document.getElementById("supplier-name");
-    supplierSelect.value = "0021";
-
-    const prodNumSelect = document.getElementById("prod-num");
+    const prodNumSelect = document.getElementById("prod-num")
     prodNumSelect.value = "01-00129"
 
-    const salesOrderSelect = document.getElementById("sales-order");
-    salesOrderSelect.value = "2024-0048-0017";
+    const salesOrderSelect = document.getElementById("sales-order")
+    salesOrderSelect.value = "2024-0048-0017"
 
-    const itemDescription = document.getElementById("item-decription");
-    itemDescription.value = "Odit consequatur perspiciatis odio libero expedita! Necessitatibus, molestiae beatae reiciendis quidem tenetur nemo? Repellendus modi.";
+    const itemDescription = document.getElementById("item-decription")
+    itemDescription.value = "Odit consequatur perspiciatis odio libero expedita! Necessitatibus, molestiae beatae reiciendis quidem tenetur nemo? Repellendus modi."
 
-    const defectDescription = document.getElementById("defect-decription");
-    defectDescription.value = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, laborum vero error odio distinctio consectetur temporibus, odit itaque facere eveniet id eos consequatur laudantium nesciunt at magni cumque labore cum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit consequatur perspiciatis odio libero expedita! Necessitatibus, molestiae beatae reiciendis quidem tenetur nemo? Repellendus modi ducimus optio aliquam voluptatum eius quam cum.";
+    const defectDescription = document.getElementById("defect-decription")
+    defectDescription.value = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, laborum vero error odio distinctio consectetur temporibus, odit itaque facere eveniet id eos consequatur laudantium nesciunt at magni cumque labore cum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit consequatur perspiciatis odio libero expedita! Necessitatibus, molestiae beatae reiciendis quidem tenetur nemo? Repellendus modi ducimus optio aliquam voluptatum eius quam cum."
 
-    const itemMarkedNC = document.getElementById("marked-nc-no");
-    itemMarkedNC.checked = true;
+    const itemMarkedNC = document.getElementById("marked-nc-no")
+    itemMarkedNC.checked = true
 
-});
+    // quantity received / quantity defective
+    let prodNum = document.querySelector("#prod-num")
+    let salesOdr = document.querySelector("#sales-order")
+    let qntyRec = document.querySelector("#qnty-received")
+    let qntyDef = document.querySelector("#qnty-defective")
+
+    function updateQuantity() {
+        if (prodNum.value !== "" && salesOdr.value !== "") {
+            qntyRec.value = 860
+        } else {
+            qntyRec.value = ""
+        }
+        checkQntyDef()
+    }
+
+    function checkQntyDef () {
+        if (qntyRec.value == "")
+            qntyDef.value = ""
+        else {
+            if (qntyDef.value < 0)
+                qntyDef.value = ""
+            if (qntyDef.value - qntyRec.value > 0)
+                qntyDef.value = qntyRec.value
+        } 
+    }
+
+    prodNum.addEventListener("change", updateQuantity)
+    salesOdr.addEventListener("change", updateQuantity)
+    qntyDef.addEventListener("change", checkQntyDef)
+})

@@ -29,8 +29,8 @@ main {
 
 /* Nav */
 #nav-top {
-padding: 10px 0;
-border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 #nav-top .width-limit {
@@ -59,7 +59,7 @@ nav {
 
 ul {
     list-style: none;
-    margin: 0  !important;
+    margin: 0 !important;
     padding: 0 !important;
 }
 
@@ -67,11 +67,13 @@ a {
     width: fit-content;
 }
 
-a, a:active {
+a,
+a:active {
     text-decoration: none !important;
 }
 
-nav a, nav a:active {
+nav a,
+nav a:active {
     color: black;
 }
 
@@ -138,9 +140,11 @@ h2 {
     border-bottom: 2px solid var(--crossfire-secondary);
 }
 
-.btn-wide, .btn-wide .btn  {
+.btn-wide,
+.btn-wide .btn {
     width: 100%;
-    max-width: 200px; /* wide buttons */
+    max-width: 200px;
+    /* wide buttons */
 }
 
 #login-box {
@@ -148,7 +152,12 @@ h2 {
     max-width: 500px;
 }
 
-form fieldset, .ncr-details, .ncr-list, #login-box, .option-box, #msg-box {
+form fieldset,
+.ncr-details,
+.ncr-list,
+#login-box,
+.option-box,
+#msg-box {
     border-radius: 8px;
     box-shadow: 0 2px 8px #00000060;
 }
@@ -160,16 +169,28 @@ form legend {
     transform: translateX(-25px);
 }
 
-form fieldset :not(legend) .fw-bold, .ncr-details .fw-bold, .ncr-list th {
+form fieldset :not(legend) .fw-bold,
+.ncr-details .fw-bold,
+.ncr-list th {
     color: var(--mid-blue) !important;
 }
 
 /* jsdelivr.net select2 drop down lists  and other form inputs border*/
-.select2-container--default .select2-selection--single, 
+.select2-selection--single,
 fieldset input,
-textarea {
+fieldset select,
+fieldset textarea {
     border: 1px solid var(--crossfire-secondary) !important;
     border-radius: 4px;
+}
+
+/* read-only inputs */
+input:read-only {
+    border: none !important;
+}
+input:read-only:focus {
+    outline: none;
+    border: none;
 }
 
 /* Radio buttons border*/
@@ -181,15 +202,15 @@ fieldset input[type="radio"] {
     border-radius: 50%;
     border: 1px solid #000 !important;
     box-shadow: inset 0 0 0 2px #fff;
-  }
+}
 
-  fieldset input[type="radio"]:checked {
+fieldset input[type="radio"]:checked {
     background-color: var(--crossfire-secondary);
-  }
+}
 
-  fieldset input[type="radio"]:not(:checked):hover {
+fieldset input[type="radio"]:not(:checked):hover {
     background-color: #ccc;
-  }
+}
 
 .ncr-details hr {
     margin: 30px 0;
@@ -207,13 +228,14 @@ fieldset input[type="radio"] {
     color: #009f7f;
 }
 
-.fa-pen-to-square, .fa-square-check {
+.fa-pen-to-square,
+.fa-square-check {
     margin-right: 10px;
 }
 
 .modal-backdrop {
     background-color: transparent !important;
- }
+}
 
 .ncr-modal {
     position: fixed;
@@ -241,7 +263,7 @@ fieldset input[type="radio"] {
 }
 
 .modal-close {
-    min-width: fit-content ;
+    min-width: fit-content;
 }
 
 .ncr-modal-body {
@@ -255,7 +277,9 @@ fieldset input[type="radio"] {
     .options-grid {
         grid-template-columns: 1fr 1fr;
     }
-    .btn-wide, .btn-wide .btn {
+
+    .btn-wide,
+    .btn-wide .btn {
         max-width: 300px;
     }
 }

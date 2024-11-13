@@ -108,14 +108,14 @@
                             <div class="d-flex row-cols-2">
                                 <label class="fw-bold" for="qnty-received">Quantity Received:</label>
                                 <input class="px-1" type="number" id="qnty-received" name="qntyReceived" readonly
-                                    tabindex="-1" value="1600" required aria-required="true">
+                                    tabindex="-1" value="1150" required aria-required="true">
                             </div>
 
                             <!-- Quantity Defective -->
                             <div class="d-flex row-cols-2">
                                 <label class="fw-bold" for="qnty-defective">Quantity Defective:</label>
                                 <input class="px-1" type="number" id="qnty-defective" name="qntyDefective" value="470"
-                                required aria-required="true">
+                                required aria-required="true" min="0">
                             </div>
                         </div>
                     </div>
@@ -212,7 +212,7 @@
     </div>
 
     <!-- scripts -->
-    <script src="javascript/nav-top.js"></script>
+    <script src="javascript/nav-top-quality-rep.js"></script>
     <script src="javascript/quality-rep-edit-data.js"></script>
     <script src="javascript/quality-rep-validation.js"></script>
 
@@ -222,12 +222,12 @@
         crossorigin="anonymous"></script>
 
     <!-- select2 -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script>
         $(document).ready(function () { $('#supplier-name').select2(); });
         $(document).ready(function () { $('.select-num').select2(); });
-    </script>
+    </script> -->
 
 </body>
 
