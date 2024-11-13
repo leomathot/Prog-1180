@@ -108,14 +108,14 @@
                             <div class="d-flex row-cols-2">
                                 <label class="fw-bold" for="qnty-received">Quantity Received:</label>
                                 <input class="px-1" type="number" id="qnty-received" name="qntyReceived" readonly
-                                    tabindex="-1" value="1600" required aria-required="true">
+                                    tabindex="-1" required aria-required="true">
                             </div>
 
                             <!-- Quantity Defective -->
                             <div class="d-flex row-cols-2">
                                 <label class="fw-bold" for="qnty-defective">Quantity Defective:</label>
                                 <input class="px-1" type="number" id="qnty-defective" name="qntyDefective" required
-                                    aria-required="true">
+                                    aria-required="true" min="0">
                             </div>
                         </div>
                     </div>
@@ -129,8 +129,9 @@
                         <div class="col">
                             <div>
                                 <!-- Description of Item -->
-                                <label class="mb-2 fw-bold" for="item-decription">Description of Item (including SAP
-                                    No.):</label>
+                                <label class="mb-2 fw-bold" for="item-decription">Description of Item 
+                                    <small>(including SAP No.)</small>:
+                                </label>
                                 <textarea class="w-100 p-1" id="item-decription" name="itemDecription" rows="3"
                                     style="min-height: 70px;"
                                     placeholder="e.g., Stainless Steel Bolt M8 (SAP No. 123458)" required
@@ -155,9 +156,9 @@
 
                         <div class="col mt-4 mt-md-0">
                             <!-- Description of Defect -->
-                            <label class="mb-2 fw-bold" for="defect-decription">Description of Defect: <small>(in as
-                                    much
-                                    detail as possible)</small></label>
+                            <label class="mb-2 fw-bold" for="defect-decription">Description of Defect 
+                                <small>(in as much detail as possible)</small>:
+                            </label>
                             <textarea class="w-100 p-1" id="defect-decription" name="defectDecription" rows="7"
                                 style="min-height: 120px;"
                                 placeholder="e.g., The stainless steel bolts have inconsistent threading, causing assembly issues."
@@ -217,7 +218,7 @@
     </div>
 
     <!-- scripts -->
-    <script src="javascript/nav-top.js"></script>
+    <script src="javascript/nav-top-quality-rep.js"></script>
     <script src="javascript/quality-rep-create-data.js"></script>
     <script src="javascript/quality-rep-validation.js"></script>
 
@@ -227,12 +228,16 @@
         crossorigin="anonymous"></script>
 
     <!-- select2 -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script>
-        $(document).ready(function () { $('#supplier-name').select2(); });
-        $(document).ready(function () { $('.select-num').select2(); });
-    </script>
+        $(document).ready(function () { 
+            $('#supplier-name').select2();
+        });
+        $(document).ready(function () { 
+            $('.select-num').select2(); 
+        });
+    </script> -->
 
 </body>
 

@@ -34,5 +34,35 @@ document.addEventListener("DOMContentLoaded", () => {
         val++
         option.text = s
         suppNameSelect.appendChild(option)
-    });
-});
+    })
+
+    // quantity received / quantity defective
+    let prodNum = document.querySelector("#prod-num")
+    let salesOdr = document.querySelector("#sales-order")
+    let qntyRec = document.querySelector("#qnty-received")
+    let qntyDef = document.querySelector("#qnty-defective")
+
+    function updateQuantity() {
+        if (prodNum.value !== "" && salesOdr.value !== "") {
+            qntyRec.value = 860
+        } else {
+            qntyRec.value = ""
+        }
+        checkQntyDef()
+    }
+
+    function checkQntyDef () {
+        if (qntyRec.value == "")
+            qntyDef.value = ""
+        else {
+            if (qntyDef.value < 0)
+                qntyDef.value = ""
+            if (qntyDef.value - qntyRec.value > 0)
+                qntyDef.value = qntyRec.value
+        } 
+    }
+
+    prodNum.addEventListener("change", updateQuantity)
+    salesOdr.addEventListener("change", updateQuantity)
+    qntyDef.addEventListener("change", checkQntyDef)
+})
