@@ -203,13 +203,14 @@ fieldset input[type="radio"] {
     border: 1px solid #000 !important;
     box-shadow: inset 0 0 0 2px #fff;
 }
-
 fieldset input[type="radio"]:checked {
-    background-color: var(--crossfire-secondary);
+    background-color: var(--crossfire-secondary) !important;
 }
-
 fieldset input[type="radio"]:not(:checked):hover {
-    background-color: #ccc;
+    background-color: #ccc !important;
+}
+fieldset input[type="radio"]:focus {
+    outline: 2px solid black;
 }
 
 .ncr-details hr {
@@ -219,13 +220,23 @@ fieldset input[type="radio"]:not(:checked):hover {
     opacity: 1;
 }
 
-.fa-square-minus {
-    color: #d07200;
-    padding-right: 10px;
+.icon-quality {
+    color: #a8a8a8;
 }
 
-.fa-square-check {
-    color: #009f7f;
+.icon-engineer {
+    color: #ec8800;
+}
+
+.icon-purchasing {
+    color: #00a67f;
+}
+
+.arrow-btn {
+    border: none;
+    border-radius: 3px;
+    padding: 1px 3px;
+    color: var(--mid-blue);
 }
 
 .fa-pen-to-square,
