@@ -136,15 +136,25 @@ h2 {
     background: var(--crossfire-primary) !important;
 }
 
+.home-grid {
+    display: grid;
+    row-gap: 30px;
+    column-gap: 20px;
+}
+
+.home-grid section:hover {
+    background-color: var(--less-white);
+}
+
 .thead {
     border-bottom: 2px solid var(--crossfire-secondary);
 }
 
+/* wide buttons */
 .btn-wide,
 .btn-wide .btn {
     width: 100%;
     max-width: 200px;
-    /* wide buttons */
 }
 
 #login-box {
@@ -221,7 +231,7 @@ fieldset input[type="radio"]:focus {
 }
 
 .icon-quality {
-    color: #a8a8a8;
+    color: #88a8c8;
 }
 
 .icon-engineer {
@@ -285,7 +295,7 @@ fieldset input[type="radio"]:focus {
 /* Media queries */
 
 @media screen and (width > 760px) {
-    .options-grid {
+    .home-grid {
         grid-template-columns: 1fr 1fr;
     }
 
