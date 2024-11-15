@@ -28,20 +28,18 @@ document.addEventListener("DOMContentLoaded", () => {
     let ok = document.querySelector("#btn-ok")
     let msgBox = document.querySelector("#msg-box")
 
+    // Save button => Saved message
     save.addEventListener("click", () => {
         form.style.display = "none"
         msgBox.style.display = "block"
         msgBox.querySelector("#title").innerHTML = `<h2><i class="fa-regular fa-circle-check me-3"></i>Form saved!</h2>`
         msgBox.querySelector("#text").innerHTML = `You can continue editing this NCR later.`
         msgBox.querySelector("#btns").innerHTML = `
-            <a class="btn bg-mid-blue d-block mt-4 mx-auto btn-wide" href="quality-rep-details.html">
+            <a class="btn bg-mid-blue d-block mt-4 mx-auto btn-wide" href="quality-rep-details.html?status=1">
                 See Details
             </a>
             <a class="btn bg-mid-blue d-block mt-4 mx-auto btn-wide" href="quality-rep-edit.html">
                 Resume Editing
-            </a>
-            <a class="btn bg-mid-blue d-block mt-4 mx-auto btn-wide" href="quality-rep-create.html">
-                Create a New NCR
             </a>
             <a class="btn bg-mid-blue d-block mt-4 mx-auto btn-wide" href="quality-rep-list.html">
                 See Your NCRs List
@@ -76,20 +74,17 @@ document.addEventListener("DOMContentLoaded", () => {
         modal.style.display = "none"
     })
 
-    // Modal OK button
+    // Modal OK button => Submited message
     ok.addEventListener("click", () => {
 
         modal.style.display = "none"
         form.style.display = "none"
         msgBox.style.display = "block"
         msgBox.querySelector("#title").innerHTML = `<h2><i class="fa-regular fa-circle-check me-3"></i>NCR submitted!</h2>`
-        msgBox.querySelector("#text").innerHTML = `You can see the NCR details, create a new one, or go to the list.`
+        msgBox.querySelector("#text").innerHTML = `<i class="fa-regular fa-paper-plane me-2 text-mid-blue"></i><strong>A notification was sent to Engineering.</strong>`
         msgBox.querySelector("#btns").innerHTML = `
-            <a class="btn bg-mid-blue d-block mt-4 mx-auto btn-wide" href="quality-rep-details.html">
+            <a class="btn bg-mid-blue d-block mt-4 mx-auto btn-wide" href="quality-rep-details.html?status=2">
                 See Details
-            </a>
-            <a class="btn bg-mid-blue d-block mt-4 mx-auto btn-wide" href="quality-rep-create.html">
-                Create a New NCR
             </a>
             <a class="btn bg-mid-blue d-block mt-4 mx-auto btn-wide" href="quality-rep-list.html">
                 See Your NCRs List

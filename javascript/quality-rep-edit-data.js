@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (qntyDef.value < 0)
                 qntyDef.value = ""
             if (qntyDef.value - qntyRec.value > 0)
-                qntyDef.value = qntyRec.value
+                qntyDef.value = ""
         } 
     }
 
