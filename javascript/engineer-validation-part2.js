@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    
+
     // Add modal
     document.querySelector(".ncr-modal").innerHTML = `
         <div class="ncr-modal-content">
@@ -20,7 +20,9 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
         </div>`
 
-    let form = document.querySelector(".ncr-form")
+    let part1 = document.querySelector("#part-1")
+    let part2 = document.querySelector("#part-2")
+    let form2 = document.querySelector("#ncr-form-part2")
     let save = document.querySelector("#btn-save")
     let submit = document.querySelector("#btn-submit")
     let modal = document.querySelector(".ncr-modal")
@@ -28,17 +30,18 @@ document.addEventListener("DOMContentLoaded", () => {
     let ok = document.querySelector("#btn-ok")
     let msgBox = document.querySelector("#msg-box")
 
-    // Save button => Saved message
+    // Save button pressed => Saved message
     save.addEventListener("click", () => {
-        form.style.display = "none"
+        part1.style.display = "none"
+        part2.style.display = "none"
         msgBox.style.display = "block"
         msgBox.querySelector("#title").innerHTML = `<h2><i class="fa-regular fa-circle-check me-3"></i>Form saved!</h2>`
         msgBox.querySelector("#text").innerHTML = `You can continue editing this NCR later.`
         msgBox.querySelector("#btns").innerHTML = `
-            <a class="btn bg-mid-blue d-block mt-4 mx-auto btn-wide" href="quality-rep-edit.html">
+            <a class="btn bg-mid-blue d-block mt-4 mx-auto btn-wide" href="engineer-edit-part2.html">
                 Continue Editing
             </a>
-            <a class="btn bg-mid-blue d-block mt-4 mx-auto btn-wide" href="quality-rep-list.html">
+            <a class="btn bg-mid-blue d-block mt-4 mx-auto btn-wide" href="engineer-list.html">
                 See Your NCRs List
             </a>`
     })
@@ -51,17 +54,19 @@ document.addEventListener("DOMContentLoaded", () => {
     // Submit button
     submit.addEventListener("click", () => {
 
-        if (form.checkValidity()) {
-            // Confirmation pop-up
-            modal.style.display = "block"
-        } else {
-            // Validation messages
-            const firstInvalidElement = form.querySelector(":invalid")
-            firstInvalidElement.scrollIntoView({ behavior: "smooth", block: "start" })
+        // Validate form2
+        if (!form2.checkValidity()) {
+            // If part2 is invalid, scroll to the first invalid field and show validation messages
+            const firstInvalidElement2 = form2.querySelector(":invalid");
+            firstInvalidElement2.scrollIntoView({ behavior: "smooth", block: "start" });
             setTimeout(() => {
-                form.reportValidity()
-            }, 300)
+                form2.reportValidity(); // This will trigger the browser's built-in validation message
+            }, 400);
+            return; // If form2 is invalid, stop further submission
         }
+
+        // If both forms are valid, show the confirmation modal
+        modal.style.display = "block";
     })
 
     // Modal cancel button
@@ -69,19 +74,19 @@ document.addEventListener("DOMContentLoaded", () => {
         modal.style.display = "none"
     })
 
-    // Modal OK button => Submited message
+    // Modal OK button => Submit
     ok.addEventListener("click", () => {
-
         modal.style.display = "none"
-        form.style.display = "none"
+        part1.style.display = "none"
+        part2.style.display = "none"
         msgBox.style.display = "block"
         msgBox.querySelector("#title").innerHTML = `<h2><i class="fa-regular fa-circle-check me-3"></i>NCR submitted!</h2>`
-        msgBox.querySelector("#text").innerHTML = `<i class="fa-regular fa-paper-plane me-2 text-mid-blue"></i><strong>A notification was sent to Engineering.</strong>`
+        msgBox.querySelector("#text").innerHTML = `<i class="fa-regular fa-paper-plane me-2 text-mid-blue"></i><strong>A notification was sent to Purchasing.</strong>`
         msgBox.querySelector("#btns").innerHTML = `
-            <a class="btn bg-mid-blue d-block mt-4 mx-auto btn-wide" href="quality-rep-details.html?status=2">
+            <a class="btn bg-mid-blue d-block mt-4 mx-auto btn-wide" href="engineer-details-part2.html">
                 See Details
             </a>
-            <a class="btn bg-mid-blue d-block mt-4 mx-auto btn-wide" href="quality-rep-list.html">
+            <a class="btn bg-mid-blue d-block mt-4 mx-auto btn-wide" href="engineer-list.html">
                 See Your NCRs List
             </a>`
     })

@@ -15,7 +15,7 @@
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
     <!-- tab icon -->
     <link rel="icon" type="image/png" href="images/Crossfire-icon.png">
-    <title>Quality Rep Edit NCR - Crossfire NCR App</title>
+    <title>Create New NCR - Crossfire NCR App</title>
 </head>
 
 <body>
@@ -29,9 +29,9 @@
         <nav>
             <div class="width-limit">
                 <ul>
-                    <li><a href="quality-rep-home.html">Home</a></li>
-                    <li><a href="quality-rep-list.html">NCR List</a></li>
-                    <li><a href="quality-rep-create.html">Create New NCR</a></li>
+                    <li><a href="engineer-home.html">Home</a></li>
+                    <li><a href="engineer-list.html">NCR List</a></li>
+                    <li><a href="#">Create New NCR</a></li>
                 </ul>
             </div>
         </nav>
@@ -40,10 +40,10 @@
 
     <main>
         <section class="width-limit py-4">
-            <h1 class="fs-4">Edit NCR</h1>
+            <h1 class="fs-4">Create a New NCR</h1>
 
-            <!-- Edit NCR Form -->
-            <form class="ncr-form my-5" id="edit-ncr-form">
+            <!-- Create New NCR Form -->
+            <form class="ncr-form my-5" id="create-ncr-form">
                 <h2 class="fs-5 mb-3">Quality Rep Section</h2>
 
                 <fieldset class="p-5 pt-4 mb-4" id="fieldset-1">
@@ -60,7 +60,7 @@
                                 <label class="ms-1" for="i-p-a-supp">Supplier or Rec-Insp</label><br>
 
                                 <input id="i-p-a-wip" type="radio" name="itemMarkedNC" value="WIP" required
-                                    aria-required="true">
+                                aria-required="true">
                                 <label class="ms-1" for="i-p-a-wip">WIP (Production Order)</label>
                             </div>
 
@@ -79,7 +79,7 @@
                             <div class="d-flex row-cols-2">
                                 <label class="fw-bold" for="ncr-num">NCR No.:</label>
                                 <input class="px-1" type="text" id="ncr-num" name="ncrNum" readonly tabindex="-1"
-                                    value="2024-0107" required aria-required="true">
+                                    required aria-required="true" value="2024-0107">
                             </div>
 
                             <!-- PO or Prod. No -->
@@ -109,14 +109,14 @@
                             <div class="d-flex row-cols-2">
                                 <label class="fw-bold" for="qnty-received">Quantity Received:</label>
                                 <input class="px-1" type="number" id="qnty-received" name="qntyReceived" readonly
-                                    tabindex="-1" value="1150" required aria-required="true">
+                                    tabindex="-1" required aria-required="true">
                             </div>
 
                             <!-- Quantity Defective -->
                             <div class="d-flex row-cols-2">
                                 <label class="fw-bold" for="qnty-defective">Quantity Defective:</label>
-                                <input class="px-1" type="number" id="qnty-defective" name="qntyDefective" value="470"
-                                required aria-required="true" min="0">
+                                <input class="px-1" type="number" id="qnty-defective" name="qntyDefective" required
+                                    aria-required="true" min="0">
                             </div>
                         </div>
                     </div>
@@ -131,9 +131,12 @@
                             <div>
                                 <!-- Description of Item -->
                                 <label class="mb-2 fw-bold" for="item-decription">Description of Item 
-                                    <small>(including SAP No.)</small>:</label>
+                                    <small>(including SAP No.)</small>:
+                                </label>
                                 <textarea class="w-100 p-1" id="item-decription" name="itemDecription" rows="3"
-                                    style="min-height: 70px;" required aria-required="true"></textarea>
+                                    style="min-height: 70px;"
+                                    placeholder="e.g., Stainless Steel Bolt M8 (SAP No. 123458)" required
+                                    aria-required="true"></textarea>
                             </div>
 
                             <!-- Item marked Nonconforming -->
@@ -145,7 +148,8 @@
                                     <label class="ms-1" for="marked-nc-yes">Yes</label>
                                 </span>
                                 <span>
-                                    <input id="marked-nc-no" type="radio" name="markedNc" value="No" required aria-required="true">
+                                    <input id="marked-nc-no" type="radio" name="markedNc" value="No" required
+                                        aria-required="true">
                                     <label class="ms-1" for="marked-nc-no">No</label>
                                 </span>
                             </div>
@@ -153,10 +157,13 @@
 
                         <div class="col mt-4 mt-md-0">
                             <!-- Description of Defect -->
-                            <label class="mb-2 fw-bold" for="defect-decription">Description of Defect: 
-                                <small>(in as much detail as possible)</small>:</label>
+                            <label class="mb-2 fw-bold" for="defect-decription">Description of Defect 
+                                <small>(in as much detail as possible)</small>:
+                            </label>
                             <textarea class="w-100 p-1" id="defect-decription" name="defectDecription" rows="7"
-                                style="min-height: 120px;" required aria-required="true"></textarea>
+                                style="min-height: 120px;"
+                                placeholder="e.g., The stainless steel bolts have inconsistent threading, causing assembly issues."
+                                required aria-required="true"></textarea>
                         </div>
                     </div>
                 </fieldset>
@@ -176,8 +183,8 @@
                         <div class="col mt-4 mt-md-0">
                             <!-- Date -->
                             <label class="mb-2 d-block fw-bold" for="ncr-date">Date:</label>
-                            <input class="w-100 px-1" type="date" id="ncr-date" name="nCRDate" 
-                                value="2024-10-13" required aria-required="true">
+                            <input class="w-100 px-1" type="date" id="ncr-date" name="nCRDate" required
+                                aria-required="true">
                         </div>
                     </div>
 
@@ -212,9 +219,9 @@
     </div>
 
     <!-- scripts -->
-    <script src="javascript/nav-top-quality-rep.js"></script>
-    <script src="javascript/quality-rep-edit-data.js"></script>
-    <script src="javascript/quality-rep-validation.js"></script>
+    <script src="javascript/nav-top-engineer.js"></script>
+    <script src="javascript/quality-rep-create-data.js"></script>
+    <script src="javascript/engineer-validation-part1.js"></script>
 
     <!-- bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

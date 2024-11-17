@@ -15,7 +15,7 @@
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
     <!-- tab icon -->
     <link rel="icon" type="image/png" href="images/Crossfire-icon.png">
-    <title>Quality Rep Create New NCR - Crossfire NCR App</title>
+    <title>Create New NCR - Crossfire NCR App</title>
 </head>
 
 <body>
@@ -31,7 +31,7 @@
                 <ul>
                     <li><a href="quality-rep-home.html">Home</a></li>
                     <li><a href="quality-rep-list.html">NCR List</a></li>
-                    <li><a href="quality-rep-create.html">Create New NCR</a></li>
+                    <li><a href="#">Create New NCR</a></li>
                 </ul>
             </div>
         </nav>
@@ -40,13 +40,14 @@
 
     <main>
         <section class="width-limit py-4">
-            <h1 class="fs-3">Create a New NCR - Quality Rep Section</h1>
+            <h1 class="fs-4">Create a New NCR</h1>
 
             <!-- Create New NCR Form -->
             <form class="ncr-form my-5" id="create-ncr-form">
+                <h2 class="fs-5 mb-3">Quality Rep Section</h2>
 
                 <fieldset class="p-5 pt-4 mb-4" id="fieldset-1">
-                    <legend class="float-none w-auto fs-6 fw-bold px-1">NCR <small>( 1/3 )</small>
+                    <legend class="float-none w-auto fs-6 fw-bold px-1"><small>Quality Rep Section ( 1/3 )</small>
                     </legend>
 
                     <div class="row row-cols-1 row-cols-md-2">
@@ -68,7 +69,7 @@
                                 <label class="mb-2 d-block fw-bold" for="supplier-name">Supplier Name:</label>
                                 <select class="w-100" id="supplier-name" name="supplierName" required
                                     aria-required="true">
-                                    <option value="" size="5">Select a Supplier</option>
+                                    <option value="">Select a Supplier</option>
                                 </select>
                             </div>
                         </div>
@@ -122,7 +123,7 @@
                 </fieldset>
 
                 <fieldset class="p-5 pt-4 mb-4" id="fieldset-2">
-                    <legend class="float-none w-auto fs-6 fw-bold px-1">NCR <small>( 2/3 )</small>
+                    <legend class="float-none w-auto fs-6 fw-bold px-1"><small>Quality Rep Section ( 2/3 )</small>
                     </legend>
 
                     <div class="row row-cols-1 row-cols-md-2">
@@ -168,7 +169,7 @@
                 </fieldset>
 
                 <fieldset class="p-5 pt-4 mb-4" id="fieldset-3">
-                    <legend class="float-none w-auto fs-6 fw-bold px-1">NCR <small>( 3/3 )</small>
+                    <legend class="float-none w-auto fs-6 fw-bold px-1"><small>Quality Rep Section ( 3/3 )</small>
                     </legend>
 
                     <div class="row row-cols-1 row-cols-md-2">
@@ -231,12 +232,8 @@
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script>
-        $(document).ready(function () { 
-            $('#supplier-name').select2();
-        });
-        $(document).ready(function () { 
-            $('.select-num').select2(); 
-        });
+        $(document).ready(function () { $('#supplier-name').select2(); });
+        $(document).ready(function () { $('.select-num').select2(); });
     </script> -->
 
 </body>

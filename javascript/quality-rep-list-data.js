@@ -49,9 +49,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Actions colunm content
     function actions(s) {
         if (s == "1")
-            return '<a class="ms-2" href="quality-rep-edit.html">Edit</a>'
+            return '<a class="" href="quality-rep-edit.html">Edit</a>'
         else if (s == "2")
-            return ''
+            return '<a class="" href="quality-rep-details.html?status=2">View</a>'
         else if (s == "3")
             return ''
         else if (s == "4")
@@ -99,7 +99,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 ${status(r.Status)}
             </td>
             <td>
-                <a class="" href="quality-rep-details.html?status=${r.Status}">View</a>
                 ${actions(r.Status)}
             </td>
         </tr>

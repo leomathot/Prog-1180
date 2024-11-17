@@ -28,17 +28,17 @@ document.addEventListener("DOMContentLoaded", () => {
     let ok = document.querySelector("#btn-ok")
     let msgBox = document.querySelector("#msg-box")
 
-    // Save button => Saved message
+    // Save button pressed
     save.addEventListener("click", () => {
         form.style.display = "none"
         msgBox.style.display = "block"
         msgBox.querySelector("#title").innerHTML = `<h2><i class="fa-regular fa-circle-check me-3"></i>Form saved!</h2>`
         msgBox.querySelector("#text").innerHTML = `You can continue editing this NCR later.`
         msgBox.querySelector("#btns").innerHTML = `
-            <a class="btn bg-mid-blue d-block mt-4 mx-auto btn-wide" href="quality-rep-edit.html">
+            <a class="btn bg-mid-blue d-block mt-4 mx-auto btn-wide" href="engineer-edit-part1.html">
                 Continue Editing
             </a>
-            <a class="btn bg-mid-blue d-block mt-4 mx-auto btn-wide" href="quality-rep-list.html">
+            <a class="btn bg-mid-blue d-block mt-4 mx-auto btn-wide" href="engineer-list.html">
                 See Your NCRs List
             </a>`
     })
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
             firstInvalidElement.scrollIntoView({ behavior: "smooth", block: "start" })
             setTimeout(() => {
                 form.reportValidity()
-            }, 300)
+            }, 400)
         }
     })
 
@@ -75,13 +75,16 @@ document.addEventListener("DOMContentLoaded", () => {
         modal.style.display = "none"
         form.style.display = "none"
         msgBox.style.display = "block"
-        msgBox.querySelector("#title").innerHTML = `<h2><i class="fa-regular fa-circle-check me-3"></i>NCR submitted!</h2>`
-        msgBox.querySelector("#text").innerHTML = `<i class="fa-regular fa-paper-plane me-2 text-mid-blue"></i><strong>A notification was sent to Engineering.</strong>`
+        msgBox.querySelector("#title").innerHTML = `<h2><i class="fa-regular fa-circle-check me-3"></i>NCR submitted! (Quality Section Complete)</h2>`
+        msgBox.querySelector("#text").innerHTML = `You can see the Quality Section details, continue to the Engineering Section, or download a partial PDF version.`
         msgBox.querySelector("#btns").innerHTML = `
-            <a class="btn bg-mid-blue d-block mt-4 mx-auto btn-wide" href="quality-rep-details.html?status=2">
+            <a class="btn bg-mid-blue d-block mt-4 mx-auto btn-wide" href="engineer-details-part1.html">
                 See Details
             </a>
-            <a class="btn bg-mid-blue d-block mt-4 mx-auto btn-wide" href="quality-rep-list.html">
+            <a class="btn bg-mid-blue d-block mt-4 mx-auto btn-wide" href="engineer-create-part2.html">
+                Complete the Engineering Section
+            </a>
+            <a class="btn bg-mid-blue d-block mt-4 mx-auto btn-wide" href="engineer-list.html">
                 See Your NCRs List
             </a>`
     })
