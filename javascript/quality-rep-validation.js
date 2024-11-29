@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".ncr-modal").innerHTML = `
         <div class="ncr-modal-content">
             <div class="ncr-modal-top d-flex justify-content-end">
-                <button class="btn btn-outline-light modal-close py-0 px-1 d-flex">
-                    <i class="fa-solid fa-xmark fs-4 p-0 m-0"></i>
+                <button class="btn btn-red modal-close">
+                    <i class="fa-solid fa-xmark"></i>
                 </button>
             </div>
             <div class="ncr-modal-body">
@@ -13,9 +13,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="ncr-modal-main mt-5"></div>
                 <div class="ncr-modal-footer mt-5">
                     <!-- Cancel -->
-                    <Button class="btn btn-dark" id="btn-cancel">Cancel</Button>
+                    <Button class="btn btn-red" id="btn-cancel">Cancel</Button>
                     <!-- OK -->
-                    <Button class="btn bg-mid-blue" id="btn-ok">OK</Button>
+                    <Button class="btn btn-green" id="btn-ok">OK</Button>
                 </div>
             </div>
         </div>`
