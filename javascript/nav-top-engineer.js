@@ -1,51 +1,29 @@
-
 document.querySelector("#nav-top").innerHTML = `
-    <div class="width-limit">
+    <div class="width-limit pt-2">
         <a href="index.html">
             <img src="images/Crossfire-logo-no-bg.png" alt="Crossfire logo"/>
         </a>
 
-        <div class="links d-flex align-items-center" id="user">
-            
-            <a class="text-black d-flex align-items-start" id="user-info" href="#">
-                <i class="fa-solid fa-user text-crossfire-primary pb-2"></i>
+        <div class="d-flex align-items-center" id="user">
 
-                <span class="small ms-3">
-                    <div>John Davis</div>
-                    <div class="fw-bold text-mid-blue">Engineering</div>
-                </span>
-            </a>
+            <div class="d-flex gap-3 pt-2" id="user-links">
             
-            <div id="user-menu-container">
-                <div class="hidden" id="user-menu">
-                    <ul class="small">
-                        <li class="p-2">
-                            <a class="text-black d-flex align-items-center" href="#">
-                                <i class="fa-solid fa-message text-crossfire-secondary pb-2 me-2" style="font-size: 1rem;"></i>
-                                Notifications
-                            </a>
-                        </li>
-                        <li class="p-2 mt-1">
-                            <a class="text-black d-flex align-items-center" href="#">
-                                <i class="fa-solid fa-address-card text-crossfire-secondary pb-2 me-2" style="font-size: 1rem;"></i>
-                                Profile
-                            </a>
-                        </li>
-                        <li class="p-2 mt-1">
-                            <a class="text-black d-flex align-items-center" href="#">
-                                <i class="fa-solid fa-gear text-crossfire-secondary pb-2 me-2" style="font-size: 1rem;"></i>
-                                Settings
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div?
+                <a href="engineer-notifications.html" title="Notifications">
+                    <i class="fa-solid fa-message"></i><span class="notif-num">3</span>
+                </a>
+                <a href="#"  title="Profile">
+                    <i class="fa-solid fa-address-card"></i>
+                </a>
+                <a href="#"  title="Settings">
+                    <i class="fa-solid fa-gear"></i>
+                </a>
+            </div>
+
+            <span class="small ms-3">
+                <div>John Davis</div>
+                <div class="fw-bold text-mid-blue">Engineering</div>
+            </span>
 
         </div>
     </div>`
-
-document.querySelector("#user-info").addEventListener("click", () => {
-    const userMenu = document.querySelector("#user-menu")
-    userMenu.classList.toggle("hidden")
-})
-      
+            

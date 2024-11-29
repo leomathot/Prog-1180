@@ -1,4 +1,3 @@
-
 document.querySelector("#nav-top").innerHTML = `
     <div class="width-limit pt-2">
         <a href="index.html">
@@ -9,7 +8,7 @@ document.querySelector("#nav-top").innerHTML = `
 
             <div class="d-flex gap-3 pt-2" id="user-links">
             
-                <a href="quality-rep-notifications.html" title="Notifications">
+                <a href="purchasing-notifications.html" title="Notifications">
                     <i class="fa-solid fa-message"></i><span class="notif-num">3</span>
                 </a>
                 <a href="#"  title="Profile">
@@ -21,11 +20,10 @@ document.querySelector("#nav-top").innerHTML = `
             </div>
 
             <span class="small ms-3">
-                <div>Sara Smith</div>
-                <div class="fw-bold text-mid-blue">Quality Rep</div>
+                <div>Olivia Cross</div>
+                <div class="fw-bold text-mid-blue">Purchasing</div>
             </span>
 
         </div>
     </div>`
-
       

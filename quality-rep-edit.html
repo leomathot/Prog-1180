@@ -177,16 +177,16 @@
                             <!-- Date -->
                             <label class="mb-2 d-block fw-bold" for="ncr-date">Date:</label>
                             <input class="w-100 px-1" type="date" id="ncr-date" name="nCRDate" 
-                                value="2024-10-13" required aria-required="true">
+                                value="2024-10-13" required aria-required="true" min="1900-01-01" max="2999-01-01">
                         </div>
                     </div>
 
                 </fieldset>
 
                 <!-- Save -->
-                <input class="btn btn-dark" id="btn-save" type="button" value="Save">
+                <input class="btn btn-orange" id="btn-save" type="button" value="Save">
                 <!-- Submit -->
-                <input class="btn bg-mid-blue" id="btn-submit" type="button" value="Submit">
+                <input class="btn btn-green" id="btn-submit" type="button" value="Submit">
 
             </form>
 
@@ -205,11 +205,11 @@
     </main>
 
     <!-- Footer -->
-    <div class="p-5 bg-light">
+    <footer class="p-5 bg-light">
         <div class="width-limit">
             <p><small>Developed by 404 Cached</small></p>
         </div>
-    </div>
+    </footer>
 
     <!-- scripts -->
     <script src="javascript/nav-top-quality-rep.js"></script>

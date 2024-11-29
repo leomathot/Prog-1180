@@ -241,7 +241,7 @@
                                 <div class="d-flex row-cols-2">
                                     <label class="fw-bold">Revision Date:</label>
                                     <input class="px-1" type="date" id="revision-date" name="revision"
-                                        required aria-required="true">
+                                        required aria-required="true" min="1900-01-01" max="2999-01-01">
                                 </div>
                             </div>
                         </div>
@@ -262,7 +262,7 @@
                                 <!-- Date -->
                                 <label class="mb-2 d-block fw-bold" for="ncr-date">Date:</label>
                                 <input class="w-100 px-1" type="date" id="ncr-date" name="nCRDate" required
-                                    aria-required="true">
+                                    aria-required="true" min="1900-01-01" max="2999-01-01">
                             </div>
                         </div>
                     </fieldset>
@@ -288,11 +288,11 @@
     </main>
 
     <!-- Footer -->
-    <div class="p-5 bg-light">
+    <footer class="p-5 bg-light">
         <div class="width-limit">
             <p><small>Developed by 404 Cached</small></p>
         </div>
-    </div>
+    </footer>
 
     <!-- scripts -->
     <script src="javascript/nav-top-engineer.js"></script>
