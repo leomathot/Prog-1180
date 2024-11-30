@@ -39,10 +39,10 @@
         <section class="width-limit py-4">
             <h1 class="fs-4">NCR Details</h1>
 
-            
+
             <h2 class="fs-5 mt-5" id="qual-rep-sect-title">Quality Rep Section</h2>
 
-            <div class="ncr-details p-5 hidden">
+            <div class="ncr-details p-5 ">
 
                 <div class="row row-cols-1 row-cols-md-2">
                     <div class="col">
@@ -133,13 +133,13 @@
         <section class="width-limit py-4">
             <h2 class="fs-5" id="eng-sect-title">Engineering Section</h2>
 
-            <div class="ncr-details p-5 hidden">
+            <div class="ncr-details p-5 ">
 
                 <div class="row row-cols-1 row-cols-md-2">
                     <div class="col">
-                            <!-- Review by CF Engineering -->
-                            <div class="fw-bold">Review by CF Engineering: </div>
-                            <div>Repair</div>
+                        <!-- Review by CF Engineering -->
+                        <div class="fw-bold">Review by CF Engineering: </div>
+                        <div>Repair</div>
                     </div>
 
                     <div class="col">
@@ -213,18 +213,83 @@
 
         </section>
 
-        <section class="width-limit py-4">
+        <section class="width-limit pt-4">
             <h2 class="fs-5" id="pur-sect-title">Purchasing Section</h2>
 
-            <div class="ncr-details p-5 hidden">
+            <div class="ncr-details p-5 ">
+                <div class="row row-cols-1 row-cols-md-2">
+                    <div class="col">
+                        <div class="fw-bold">Preliminary Decision:</div>
+                        <ul>
+                            <li>Rework "In-House"</li>
+                            <li>Scrap In House</li>
+                            <li>Return to Supplier for "rework" or "replacement"</li>
+                            <li>Defer for HBC Engineering Review</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <div class="fw-bold">Was a CAR raised?</div>
+                        <span>Yes (CAR #12345)</span>
 
+                        <div class="fw-bold mt-2">Follow-up Required:</div>
+                        <span>Yes (Expected: 12/05/2024)</span>
+                    </div>
+                </div>
+
+                <div class="row row-cols-1 row-cols-md-2 mt-3">
+                    <div class="col">
+                        <div class="fw-bold">Operations Manager:</div>
+                        <span>Alex Brown</span>
+                    </div>
+                    <div class="col">
+                        <div class="fw-bold">Date:</div>
+                        <span>11/28/2024</span>
+                    </div>
+                </div>
+                <hr>
+                <div class="row row-cols-1 row-cols-md-2 mt-3">
+                    <div class="col">
+                        <div class="fw-bold">Re-Inspected Acceptable:</div>
+                        <span>Yes</span>
+                    </div>
+                    <div class="col">
+                        <div class="fw-bold">New NCR Number (if applicable):</div>
+                        <span>NCR-2024-0110</span>
+                    </div>
+                </div>
+                <div class="row row-cols-1 row-cols-md-2 mt-3">
+                    <div class="col">
+                        <div class="fw-bold">Inspector's Name:</div>
+                        <span>Jessica Taylor</span>
+                    </div>
+                    <div class="col">
+                        <div class="fw-bold">NCR Closed:</div>
+                        <span>Yes</span>
+                    </div>
+                </div>
+                <div class="row row-cols-1 row-cols-md-2 mt-3">
+                    <div class="col">
+                        <div class="fw-bold">Quality Department:</div>
+                        <span>Paul Green</span>
+                    </div>
+                    <div class="col">
+                        <div class="fw-bold">Date:</div>
+                        <span>11/29/2024</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="mt-4">
+        </section>
+
+        <section class="width-limit">
+
+            <div class="my-4">
                 <!-- List -->
                 <a class="btn btn-dark" href="purchasing-list.html">List</a>
                 <!-- Print PDF-->
-                <button class="btn bg-mid-blue" onclick="generatePDF('pur')">Download PDF</button>
+                <!-- <a class="btn bg-mid-blue" onclick="generatePDF('eng')">Print PDF</a> -->
+                <!-- <button class="btn bg-mid-blue" onclick="generatePDF('eng')">Download PDF</button> -->
+                <button class="btn bg-mid-blue" onclick="generatePDF('purchasing')">Download PDF</button>
             </div>
 
         </section>
