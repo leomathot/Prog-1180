@@ -13,16 +13,16 @@ document.addEventListener("DOMContentLoaded", () => {
     let statusDown = document.querySelector("#status-down")
 
     let records = [
-        { "NCR Number": "2023-188", "Date": "12/04/2023", "Product": "04-00157", "Status": "1", "Unread": "False" },
-        { "NCR Number": "2023-205", "Date": "12/13/2023", "Product": "06-00587", "Status": "1", "Unread": "False" },
-        { "NCR Number": "2024-109", "Date": "04/21/2024", "Product": "08-00305", "Status": "1", "Unread": "False" },
-        { "NCR Number": "2024-111", "Date": "05/26/2024", "Product": "02-00987", "Status": "2", "Unread": "False" },
-        { "NCR Number": "2024-123", "Date": "06/17/2024", "Product": "08-00345", "Status": "1", "Unread": "False" },
-        { "NCR Number": "2024-132", "Date": "06/22/2024", "Product": "02-00987", "Status": "1", "Unread": "False" },
-        { "NCR Number": "2024-135", "Date": "07/09/2024", "Product": "02-00214", "Status": "2", "Unread": "False" },
-        { "NCR Number": "2024-138", "Date": "08/30/2024", "Product": "08-00345", "Status": "1", "Unread": "False" },
-        { "NCR Number": "2024-163", "Date": "09/14/2024", "Product": "02-00715", "Status": "2", "Unread": "False" },
-        { "NCR Number": "2024-178", "Date": "10/25/2024", "Product": "02-00987", "Status": "1", "Unread": "False" }
+        { "NCR Number": "2023-188", "Date": "12/04/2023", "Product": "04-00157", "Status": "4", "Unread": "True" },
+        { "NCR Number": "2023-205", "Date": "12/13/2023", "Product": "06-00587", "Status": "5", "Unread": "False" },
+        { "NCR Number": "2024-109", "Date": "04/21/2024", "Product": "08-00305", "Status": "6", "Unread": "False" },
+        { "NCR Number": "2024-111", "Date": "05/26/2024", "Product": "02-00987", "Status": "6", "Unread": "False" },
+        { "NCR Number": "2024-123", "Date": "06/17/2024", "Product": "08-00345", "Status": "5", "Unread": "False" },
+        { "NCR Number": "2024-132", "Date": "06/22/2024", "Product": "02-00987", "Status": "5", "Unread": "False" },
+        { "NCR Number": "2024-135", "Date": "07/09/2024", "Product": "02-00214", "Status": "4", "Unread": "True" },
+        { "NCR Number": "2024-138", "Date": "08/30/2024", "Product": "08-00345", "Status": "5", "Unread": "False" },
+        { "NCR Number": "2024-163", "Date": "09/14/2024", "Product": "02-00715", "Status": "4", "Unread": "False" },
+        { "NCR Number": "2024-178", "Date": "10/25/2024", "Product": "02-00987", "Status": "4", "Unread": "True" }
     ]
 
     // Title for status abbreviations
@@ -49,17 +49,18 @@ document.addEventListener("DOMContentLoaded", () => {
     // Actions colunm content
     function actions(s) {
         if (s == "1")
-            return '<a class="" href="quality-rep-edit.html">Edit</a>'
+            return ''
         else if (s == "2")
-            return '<a class="" href="quality-rep-details.html">View</a>'
+            return ''
         else if (s == "3")
             return ''
         else if (s == "4")
-            return ''
+            return `<a class="" href="purchasing-details-part2.html" title="View Quality Rep and Engineering Sections Details">View</a> 
+                <a class="ms-2" href="purchasing-create.html" title="Start the Purchasing Section">Continue</a>`
         else if (s == "5")
-            return ''
+            return '<a class="" href="purchasing-edit.html" title="Continue Editing Purchasing Section">Edit</a>'
         else if (s == "6")
-            return ''
+            return '<a class="" href="purchasing-details-part3.html" title="View NCR Details">View</a>'
         else return ""
     }
 

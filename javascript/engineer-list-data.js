@@ -49,14 +49,14 @@ document.addEventListener("DOMContentLoaded", () => {
     // Actions colunm content
     function actions(s) {
         if (s == "1")
-            return '<a class="ms-2" href="engineer-edit-part1.html" title="Continue Editing Quality Rep Section">Edit</a>'
+            return '<a class="" href="engineer-edit-part1.html" title="Continue Editing Quality Rep Section">Edit</a>'
         else if (s == "2")
-            return `<a class="ms-2" href="engineer-details-part1.html" title="View Quality Rep Section Details">View</a> 
-                <a class="ms-2" href="engineer-create-part2.html" title="Start the Engineering Section">Continue</a> `
+            return `<a class="" href="engineer-details-part1.html" title="View Quality Rep Section Details">View</a> 
+                <a class="ms-2" href="engineer-create-part2.html" title="Start the Engineering Section">Continue</a>`
         else if (s == "3")
-        return '<a class="ms-2" href="engineer-edit-part2.html" title="Continue Editing Engineering Section">Edit</a>'
+        return '<a class="" href="engineer-edit-part2.html" title="Continue Editing Engineering Section">Edit</a>'
         else if (s == "4")
-            return '<a class="ms-2" href="engineer-details-part2.html" title="View Quality Rep and Engineering Sections Details">View</a> '
+            return '<a class="" href="engineer-details-part2.html" title="View Quality Rep and Engineering Sections Details">View</a> '
         else if (s == "5")
             return ''
         else if (s == "6")
