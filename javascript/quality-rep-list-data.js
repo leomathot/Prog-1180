@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ]
 
     // Title for status abbreviations
-    let statusInfo = `1 - Quality Section In Progress \n2 - Quality Section Complete\n3 - Engineering Section In Progress \n4 - Engineering Section Complete\n5 - Purchasing Section In Progress \n6 - Purchasing Section Complete\n`
+    let statusInfo = `1 - Quality Section In Progress \n2 - Quality Section Complete\n3 - Engineering Section In Progress \n4 - Engineering Section Complete\n5 - Purchasing Section In Progress \n6 - Purchasing Section Complete ( Closed )\n`
 
     // Status colunm content
     function status(s) {
