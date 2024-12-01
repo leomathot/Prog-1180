@@ -427,6 +427,11 @@ fieldset input[type="radio"]:focus {
     min-width: 20px;
 }
 
+/* Footer */
+footer {
+    margin-top: 60px;
+}
+
 /* Media queries */
 
 @media screen and (width > 760px) {
