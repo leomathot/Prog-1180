@@ -19,7 +19,7 @@ function generatePDF(role) {
         pdf.text(title, pageWidth / 2, 20, { align: 'center' });
         pdf.addImage(img, 'png', 15, 40, 180, 120);  // IMAGE
         pdf.text('Created by: 404 Cached', pageWidth / 2, pageHeight - 10, { align: 'center' });
-        pdf.save('NCR REPORT.pdf');  // PDF TITLE
+        pdf.save('NCR #54544 REPORT.pdf');  // PDF TITLE
 
     } else if (role == 'eng') {
 
@@ -39,7 +39,7 @@ function generatePDF(role) {
         pdf.addImage(img2, 'png', 15, 40, 180, 100);  // Engineer section image
 
         pdf.text('Created by: 404 Cached', pageWidth / 2, pageHeight - 10, { align: 'center' });
-        pdf.save('NCR REPORT.pdf');  // PDF TITLE  
+        pdf.save('NCR #54544 REPORT.pdf');  // PDF TITLE  
 
     } else if (role == 'pur') {
 
@@ -73,6 +73,6 @@ function generatePDF(role) {
         pdf.addImage(img3, 'png', 15, 40, 180, 100);  // Purchasing section image
 
         pdf.text('Created by: 404 Cached', pageWidth / 2, pageHeight - 10, { align: 'center' });
-        pdf.save('NCR REPORT.pdf');  // PDF TITLE  
+        pdf.save('NCR #54544 REPORT.pdf');  // PDF TITLE  
     }
 }
