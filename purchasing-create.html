@@ -339,7 +339,7 @@
                             <div class="col">
                                 <!-- New NCR Number:-->
                                 <div class="mt-4">
-                                    <label class="mb-2 d-block fw-bold">New NCR Number: </label>
+                                    <label class="mb-2 d-block fw-bold" for="newNcr">New NCR Number: </label>
                                     <input class="w-100 px-1" type="text" id="newNcr" name="newNcr" required
                                         aria-required="true" disabled readonly>
                                 </div>
@@ -353,12 +353,6 @@
                                 <label class="mb-2 d-block fw-bold" for="inspector">Inspector's Name: </label>
                                 <input class="w-100 px-1" type="text" id="inspector" name="inspector" readonly
                                     tabindex="-1" value="Tom Dwan" required aria-required="true">
-                            </div>
-                            <div class="col mt-4 mt-md-0">
-                                <!-- Date -->
-                                <label class="mb-2 d-block fw-bold" for="ncr-date2">Date:</label>
-                                <input class="w-100 px-1" type="date" id="ncr-date2" name="nCRDate" required
-                                    aria-required="true" min="1900-01-01" max="2099-01-01">
                             </div>
                         </div>
                         <div class="row row-cols-1 row-cols-md-2">
@@ -377,13 +371,17 @@
                         </div>
                     </fieldset>
 
-                    <!-- Save -->
-                    <input class="btn btn-orange" id="btn-save" type="button" value="Save">
-                    <!-- Submit -->
-                    <input class="btn btn-green" id="btn-submit" type="button" value="Submit">
-                    <!-- Fill form -->
-                    <input class="btn btn-secondary" id="btn-fill" type="button" value="Fill">
-
+                    <div class="d-flex">
+                        <div>
+                            <!-- Save -->
+                            <input class="btn btn-orange" id="btn-save" type="button" value="Save">
+                            <!-- Submit -->
+                            <input class="btn btn-green" id="btn-submit" type="button" value="Submit">
+                        </div>
+                        <!-- Fill form -->
+                        <input class="link bg-transparent text-primary ms-auto me-5" id="btn-fill" type="button"
+                            value="Fill Form">
+                    </div>
                 </form>
 
             </article>
