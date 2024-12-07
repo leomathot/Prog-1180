@@ -233,6 +233,10 @@ h2 {
     font-weight: 500;
 }
 
+.unread a {
+    color: #004496;
+}
+
 #login-box {
     width: 100%;
     max-width: 500px;
