@@ -19,7 +19,7 @@ function generatePDF(role) {
         pdf.text(title, pageWidth / 2, 20, { align: 'center' });
         pdf.addImage(img, 'png', 15, 40, 180, 120);  // IMAGE
         pdf.text('Created by: 404 Cached', pageWidth / 2, pageHeight - 10, { align: 'center' });
-        pdf.save('NCR 45454544 REPORT.pdf');  // PDF TITLE
+        pdf.save('NCR_2024-132_Report.pdf');  // PDF TITLE
 
     } else if (role == 'eng') {
 
@@ -39,7 +39,7 @@ function generatePDF(role) {
         pdf.addImage(img2, 'png', 15, 40, 180, 100);  // Engineer section image
 
         pdf.text('Created by: 404 Cached', pageWidth / 2, pageHeight - 10, { align: 'center' });
-        pdf.save('NCR 48854544 REPORT.pdf');  // PDF TITLE  
+        pdf.save('NCR_2024-132_Report.pdf');  // PDF TITLE  
 
     } else if (role == 'pur') {
 
@@ -63,7 +63,7 @@ function generatePDF(role) {
 
         // Adds Engineer section title to pdf
         pdf.text(title2, pageWidth / 2, 20, { align: 'center' });
-        pdf.addImage(img2, 'png', 15, 40, 180, 120);
+        pdf.addImage(img2, 'png', 15, 40, 180, 100);
         pdf.text('Created by: 404 Cached', pageWidth / 2, pageHeight - 10, { align: 'center' });
 
         pdf.addPage();  // Adds page for next section
@@ -73,6 +73,6 @@ function generatePDF(role) {
         pdf.addImage(img3, 'png', 15, 40, 180, 100);  // Purchasing section image
 
         pdf.text('Created by: 404 Cached', pageWidth / 2, pageHeight - 10, { align: 'center' });
-        pdf.save('NCR 545454544 REPORT.pdf');  // PDF TITLE  
+        pdf.save('NCR_2024-132_Report.pdf');  // PDF TITLE  
     }
 }

@@ -98,7 +98,7 @@ nav ul li:not(:first-child) {
     position: absolute;
     top: -8px;
     left: 10px;
-    background: #ec5300;
+    background: #C74600;
     color: white;
     font-size: 0.7rem;
     width: 18px;
@@ -175,7 +175,7 @@ h2 {
 /* btn green */
 .btn-green {
     color: white !important;
-    background: #03896a !important;
+    background: #038264 !important;
 }
 
 .btn-green:hover {

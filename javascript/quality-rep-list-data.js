@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let records = [
         { "NCR Number": "2023-188", "Date": "12/04/2023", "Product": "04-00157", "Status": "1", "Unread": "False" },
         { "NCR Number": "2023-205", "Date": "12/13/2023", "Product": "06-00587", "Status": "1", "Unread": "False" },
+        { "NCR Number": "2024-107", "Date": "03/08/2024", "Product": "09-00437", "Status": "6", "Unread": "True" },
         { "NCR Number": "2024-109", "Date": "04/21/2024", "Product": "08-00305", "Status": "1", "Unread": "False" },
         { "NCR Number": "2024-111", "Date": "05/26/2024", "Product": "02-00987", "Status": "2", "Unread": "False" },
         { "NCR Number": "2024-123", "Date": "06/17/2024", "Product": "08-00345", "Status": "1", "Unread": "False" },
@@ -26,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ]
 
     // Title for status abbreviations
-    let statusInfo = `1 - Quality Section In Progress \n2 - Quality Section Complete\n3 - Engineering Section In Progress \n4 - Engineering Section Complete\n5 - Purchasing Section In Progress \n6 - Purchasing Section Complete ( Closed )\n`
+    let statusInfo = `1 - Quality Section In Progress \n2 - Quality Section Complete\n3 - Engineering Section In Progress \n4 - Engineering Section Complete\n5 - Purchasing Section In Progress \n6 - Purchasing Section Complete / Closed\n`
 
     // Status colunm content
     function status(s) {
@@ -41,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
         else if (s == "5")
             return `<i class="fa-solid fa-circle-half-stroke color-status-5 me-2" style="rotate: -45deg;"></i> <span title="${statusInfo}">5 - PSIP</span>`
         else if (s == "6")
-            return `<i class="fa-solid fa-circle color-status-6 me-2"></i> <span title="${statusInfo}">6 - PSC</span>`
+            return `<i class="fa-solid fa-circle color-status-6 me-2"></i> <span title="${statusInfo}">6 - Closed</span>`
         else
             return ""
     }
@@ -59,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
         else if (s == "5")
             return ''
         else if (s == "6")
-            return ''
+            return '<a class="" href="quality-rep-details-closed.html">View</a>'
         else return ""
     }
 

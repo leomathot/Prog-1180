@@ -13,7 +13,7 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- tab icon -->
     <link rel="icon" type="image/png" href="images/Crossfire-icon.png">
-    <title>NCR Details - Crossfire NCR App</title>
+    <title>Quality Rep NCR List - Crossfire NCR App</title>
 </head>
 
 <body>
@@ -27,8 +27,9 @@
         <nav>
             <div class="width-limit">
                 <ul>
-                    <li><a href="purchasing-home.html">Home</a></li>
-                    <li><a href="purchasing-list.html">NCR List</a></li>
+                    <li><a href="quality-rep-home.html">Home</a></li>
+                    <li><a href="quality-rep-list.html">NCR List</a></li>
+                    <li><a href="quality-rep-create.html">Create New NCR</a></li>
                 </ul>
             </div>
         </nav>
@@ -38,10 +39,10 @@
     <main>
         <section class="width-limit py-4">
             <h1 class="fs-4">NCR Details</h1>
-
+            
             <h2 class="fs-5 mt-5" id="qual-rep-sect-title">Quality Rep Section</h2>
 
-            <div class="ncr-details p-5 ">
+            <div class="ncr-details p-5">
 
                 <div class="row row-cols-1 row-cols-md-2">
                     <div class="col">
@@ -126,7 +127,9 @@
                         <span>10/14/2024</span>
                     </div>
                 </div>
+
             </div>
+
         </section>
 
         <section class="width-limit py-4">
@@ -260,7 +263,7 @@
                 <div class="row row-cols-1 row-cols-md-2 mt-3">
                     <div class="col">
                         <div class="fw-bold">Quality Department:</div>
-                        <span>Paul Green</span>
+                        <span>Sara Smith</span>
                     </div>
                     <div class="col">
                         <div class="fw-bold">Date:</div>
@@ -274,14 +277,13 @@
         <section class="width-limit">
 
             <div class="pb-4">
-                <!-- List -->
-                <a class="btn btn-dark" href="purchasing-list.html">List</a>
-                <!-- Print PDF-->
+                <!-- List btn -->
+                <a class="btn btn-dark" href="quality-rep-list.html">List</a>
+                <!-- Edit btn -->
+                <a class="btn bg-mid-blue" id="edit-btn" style="display: none;" href="quality-rep-edit.html">Edit</a>
+                <!-- Print PDF -->
                 <button class="btn bg-mid-blue" onclick="generatePDF('pur')">Download PDF</button>
             </div>
-
-        </section>
-
     </main>
 
     <!-- Footer -->
@@ -292,21 +294,37 @@
     </footer>
 
     <!-- scripts -->
-    <script src="javascript/nav-top-purchasing.js"></script>
-    <script src="javascript/print-pdf.js"></script> <!--PDF SCRIPT-->
+    <script src="javascript/nav-top-quality-rep.js"></script>
+    <script src="javascript/print-pdf.js"></script> <!-- PDF SCRIPT -->
+
+    <!-- Check status to know if show edit button or not -->
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const urlParams = new URLSearchParams(window.location.search)
+            const status = urlParams.get('status')
+
+            if (status === '1') {
+                document.getElementById('edit-btn').style.display = 'inline-block'
+                console.log("status: 1") // If status == 1 then show edit btn
+            }
+            else if (status == '2') {
+                console.log("status: 2")
+            }
+        })
+    </script> -->
 
     <!-- bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
-    <!--Imported Library for PDF -PETER -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"
-        integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/"
-        crossorigin="anonymous"></script>
+        <!-- Imported Library for PDF - PETER -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"
+            integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>
