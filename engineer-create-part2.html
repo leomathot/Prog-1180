@@ -43,7 +43,7 @@
             <!-- Read-only Quality Rep Details -->
             <article class="mt-5" id="part-1">
                 <h2 class="fs-5">Quality Rep Section</h2>
-                
+
                 <div class="ncr-details p-5">
 
                     <div class="row row-cols-1 row-cols-md-2">
@@ -135,7 +135,7 @@
                 </div>
                 <!-- Edit Quality Part Button -->
                 <a class="btn btn-orange mt-4" href="engineer-edit-part1.html">Edit Quality Rep Section</a>
-            </article> 
+            </article>
 
             <!-- Engineer Section -->
             <article class="mt-5" id="part-2">
@@ -227,22 +227,22 @@
                                 <!-- Original Rev. Number: -->
                                 <div class="d-flex row-cols-2">
                                     <label class="fw-bold">Original Rev. Number: </label>
-                                    <input class="px-1" type="text" id="original-rev" name="originalRev"
-                                         required aria-required="true">
+                                    <input class="px-1" type="text" id="original-rev" name="originalRev" required
+                                        aria-required="true">
                                 </div>
 
                                 <!-- >Updated Rev. Number: -->
                                 <div class="d-flex row-cols-2">
                                     <label class="fw-bold">Updated Rev. Number:</label>
-                                    <input class="px-1" type="text" id="updated-rev" name="updatedlRev"
-                                        required aria-required="true">
+                                    <input class="px-1" type="text" id="updated-rev" name="updatedlRev" required
+                                        aria-required="true">
                                 </div>
 
                                 <!-- Revision Date: -->
                                 <div class="d-flex row-cols-2">
                                     <label class="fw-bold">Revision Date:</label>
-                                    <input class="px-1" type="date" id="revision-date" name="revision"
-                                        required aria-required="true" min="1900-01-01" max="2999-01-01">
+                                    <input class="px-1" type="date" id="revision-date" name="revision" required
+                                        aria-required="true" min="1900-01-01" max="2999-01-01">
                                 </div>
                             </div>
                         </div>
@@ -268,10 +268,16 @@
                         </div>
                     </fieldset>
 
-                    <!-- Save -->
-                    <input class="btn btn-orange" id="btn-save" type="button" value="Save">
-                    <!-- Submit -->
-                    <input class="btn btn-green" id="btn-submit" type="button" value="Submit">
+                    <div class="d-flex">
+                        <div>
+                            <!-- Save -->
+                            <input class="btn btn-orange" id="btn-save" type="button" value="Save">
+                            <!-- Submit -->
+                            <input class="btn btn-green" id="btn-submit" type="button" value="Submit">
+                        </div>
+                        <input class="link bg-transparent text-primary ms-auto me-5" id="btn-fill" type="button"
+                            value="Fill Form">
+                    </div>
 
                 </form>
             </article>
@@ -298,6 +304,7 @@
     <!-- scripts -->
     <script src="javascript/nav-top-engineer.js"></script>
     <script src="javascript/engineer-validation-part2.js"></script>
+    <script src="javascript/engineer-button.js"></script>
 
     <!-- bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

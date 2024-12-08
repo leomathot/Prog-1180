@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     fill.addEventListener("click", () => {
 
         var followUpType = document.getElementById('followUpType');
-        followUpType.value = "abc-type"
+        followUpType.value = "Type B"
 
         var followUpDate = document.getElementById('followUpDate');
         followUpDate.value = "2024-11-01"
@@ -34,10 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const date1 = document.getElementById("ncr-date1")
         date1.value = "2024-01-01"
-
-        const date2 = document.getElementById("ncr-date2")
-        date2.value = "2024-01-01"
-
+        
         const date3 = document.getElementById("ncr-date3")
         date3.value = "2024-01-01"
     })
