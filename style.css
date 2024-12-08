@@ -175,31 +175,31 @@ h2 {
 /* btn green */
 .btn-green {
     color: white !important;
-    background: #038264 !important;
+    background: #035E49 !important;
 }
 
 .btn-green:hover {
-    background: #006e55 !important;
+    background: #007d60 !important;
 }
 
 .btn-green:focus {
     box-shadow: 0 0 0 4px #aaa !important;
-    background: #006e55 !important;
+    background: #007d60 !important;
 }
 
 /* btn orange */
 .btn-orange {
     color: white !important;
-    background: #bb5a00 !important;
+    background: #8A4300 !important;
 }
 
 .btn-orange:hover {
-    background: #9d4c00 !important;
+    background: #bb5a00 !important;
 }
 
 .btn-orange:focus {
     box-shadow: 0 0 0 4px #aaa !important;
-    background: #9d4c00 !important;
+    background: #bb5a00 !important;
 }
 
 /* btn red */
