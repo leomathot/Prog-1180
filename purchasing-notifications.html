@@ -42,7 +42,7 @@
             <div class="info-box py-5 px-4 mt-5">
 
                 <div class="" id="notif-list">
-                    <button class="notif-row" tabindex="0">
+                    <button class="notif-row unread" tabindex="0">
                         <span>
                             Nov 30, 2024 - 10:47 AM
                         </span>
@@ -58,7 +58,7 @@
                             The Quality Rep and Eng. sections of the NCR 2024-204 were completed.
                         </span>
                     </button>
-                    <button class="notif-row" tabindex="0">
+                    <button class="notif-row unread" tabindex="0">
                         <span>
                             Nov 25, 2024 - 4:12 PM
                         </span>
@@ -120,7 +120,11 @@
                         The Quality Rep and Eng. sections of the NCR 2024-204 were completed
                     </p>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit neque maiores nesciunt animi molestiae aliquid quia porro quam, in vitae dicta atque debitis tempore quisquam? Officia iste nemo distinctio itaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae officia, possimus minima accusamus sequi expedita placeat molestiae maxime aliquam sit commodi, explicabo, sed fugit debitis iste atque! Exercitationem, dolorem eum.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit neque maiores nesciunt
+                        animi molestiae aliquid quia porro quam, in vitae dicta atque debitis tempore quisquam? Officia
+                        iste nemo distinctio itaque! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Repudiandae officia, possimus minima accusamus sequi expedita placeat molestiae maxime aliquam
+                        sit commodi, explicabo, sed fugit debitis iste atque! Exercitationem, dolorem eum.
                     </p>
                     <div>
                         <a href="purchasing-details-part2.html">See the NCR details</a>
@@ -158,11 +162,20 @@
             })
 
             close.addEventListener("click", () => {
-                    list.classList.remove("hidden")
-                    notif.classList.add("hidden")
+                list.classList.remove("hidden")
+                notif.classList.add("hidden")
             })
         })
     </script>
+
+    <style>
+        .toggle-text {
+            color: #29587F;
+            display: block;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
 
     <!-- bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
