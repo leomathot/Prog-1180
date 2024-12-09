@@ -9,7 +9,7 @@ document.querySelector("#nav-top").innerHTML = `
             <div class="d-flex gap-3 pt-2" id="user-links">
             
                 <a href="purchasing-notifications.html" title="Notifications">
-                    <i class="fa-solid fa-message"></i><span class="notif-num">3</span>
+                    <i class="fa-solid fa-message"></i><span class="notif-num">5</span>
                 </a>
                 <a href="#"  title="Profile">
                     <i class="fa-solid fa-address-card"></i>
