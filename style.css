@@ -432,6 +432,62 @@ fieldset input[type="radio"]:focus {
     cursor: pointer;
 }
 
+/* ===== Flying Menu ===== */
+.flyingMenu {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    background-color: white;
+    z-index: 1000;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+#menu-list {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 5px 0;
+}
+
+.flyingMenu.expanded #menu-list {
+    display: block;
+}
+
+.btnChevron {
+    background-color: #5897C9;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.btnChevron:hover {
+    background-color: #5897C9;
+}
+
+.flyingMenu li {
+    margin: 5px 0;
+}
+
+.flyingMenu li a {
+    display: block;
+    padding: 5px 10px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.flyingMenu li a:hover {
+    background-color: #5897C9;
+    color: white;
+    border-radius: 4px;
+}
+
 #close-notif-btn {
     display: block;
     margin-left: auto;
