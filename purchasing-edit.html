@@ -13,6 +13,7 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- tab icon -->
     <link rel="icon" type="image/png" href="images/Crossfire-icon.png">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <title>Continue NCR - Crossfire NCR App</title>
 </head>
 
@@ -36,12 +37,26 @@
     </header>
 
     <main>
+        <nav class="flyingMenu" id="menu-container">
+            <button id="toggle-menu" class="btnChevron" onclick="toggleMenu()">
+                <i id="chevron-icon" class="bx bx-dots-vertical-rounded"></i>
+            </button>
+            <ul id="menu-list">
+                <li><a></a></li>
+                <li><a href="#ncrFormHeader">Back to Top</a></li>
+                <li><a href="#qualityRepSection">Quality Rep</a></li>
+                <li><a href="#eng-sect-title">Engineering</a></li>
+                <li><a href="#purchasingSection">Purchasing</a></li>
+                <li><a href="#actionButtons">Action Buttons</a></li>
+            </ul>
+        </nav>
+
         <section class="width-limit py-4">
-            <h1 class="fs-4">Continue NCR</h1>
+            <h1 class="fs-4" id="ncrFormHeader">Continue NCR</h1>
 
             <!-- Read-only Quality Rep Details -->
             <article class="mt-5" id="part-1">
-                <h2 class="fs-5">Quality Rep Section</h2>
+                <h2 class="fs-5" id="qualityRepSection">Quality Rep Section</h2>
                 <div class="ncr-details p-5">
 
                     <div class="row row-cols-1 row-cols-md-2">
@@ -222,7 +237,7 @@
 
             <article class="mt-5" id="part-3">
 
-                <h2 class="fs-5">Purchasing Section</h2>
+                <h2 class="fs-5" id="purchasingSection">Purchasing Section</h2>
 
                 <!-- Form -->
                 <form class="ncr-form mt-3" id="ncr-form-part2">
@@ -373,7 +388,7 @@
                         </div>
                     </fieldset>
 
-                    <div class="d-flex">
+                    <div class="d-flex" id="actionButtons">
                         <div>
                             <!-- Save -->
                             <input class="btn btn-orange" id="btn-save" type="button" value="Save">
@@ -412,6 +427,7 @@
     <script src="javascript/nav-top-purchasing.js"></script>
     <script src="javascript/purchasing-create.js"></script>
     <script src="javascript/purchasing-button.js"></script>
+    <script src="javascript/flying-menu.js"></script>
 
     <!-- bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
