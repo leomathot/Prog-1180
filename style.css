@@ -425,6 +425,13 @@ fieldset input[type="radio"]:focus {
     width: 30%;
 }
 
+.toggle-text {
+    color: #29587F;
+    display: block;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 #close-notif-btn {
     display: block;
     margin-left: auto;

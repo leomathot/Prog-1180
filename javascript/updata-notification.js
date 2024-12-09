@@ -13,9 +13,15 @@ document.addEventListener("DOMContentLoaded", () => {
     notifRows.forEach(row => {
         // Create Mark Read/Unread toggle text
         const toggleText = document.createElement("span");
-        toggleText.textContent = "Mark Read";
         toggleText.classList.add("toggle-text");
-        toggleText.style.cursor = "pointer"; // Make it look clickable
+        toggleText.style.cursor = "pointer";
+
+        // Set initial state based on row class
+        if (row.classList.contains('unread')) {
+            toggleText.textContent = "Mark Read";
+        } else {
+            toggleText.textContent = "Mark Unread";
+        }
 
         // Toggle between Read/Unread when clicking the text
         toggleText.addEventListener('click', function (event) {
